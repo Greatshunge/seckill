@@ -1,6 +1,5 @@
 /**
- * Created by Jeffery Wang.
- * Create Time: 2015-06-16 19:52
+ * Created by
  * Author Link: http://blog.wangjunfeng.com
  */
 var nativeShare = function (elementNode, config) {
