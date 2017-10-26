@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- meta标签设置-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- app标题 -->
+		<title>我的资料</title>
+		<!-- 使用iOS CSS主题样式-->
+		<link rel="stylesheet" href="dist/css/framework7.ios.min.css">
+		<!-- iOS related颜色样式 -->
+		<link rel="stylesheet" href="dist/css/framework7.ios.colors.min.css">
+		<!-- 自定义样式-->
+		<link rel="stylesheet" href="dist/css/my-app.css">
+		<link rel="stylesheet" type="text/css" href="css/moblie.css" />
+		<!--模拟ios下拉-->
+		<link rel="stylesheet" type="text/css" href="css/iosSelect.css" />
+		
+	</head>
+
+	<body>
+		<div class="appPrompted">
+			<div class="promptLeft">
+				<div style="float: left;width: 65px;">
+					<img src="img/close.png" class="proclose" style="width: 18px;vertical-align: top; margin-top: 17px;margin-left: 5px;"/>
+					<img src="img/icon.png" style="width: 33px;margin: 7px 0px 0px 5px;"/>
+				</div>
+				<p class="promptptxt">打开花源APP赚取福利</p>
+				<p class="promptptxt">更多福利等你来取！</p>
+			</div>
+			<a href="javascript:;">
+				<div class="promptRight">
+					立即打开
+				</div>
+			</a>
+			<div style="clear: both;"></div>
+		</div>
+		<!-- 所有的Views视图 -->
+		<div class="views vihide">
+			<!-- 主视图（需要有"view-main"样式） -->
+			<div class="view view-main">
+				<!-- 顶部导航栏 -->
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="left">
+							<a href="meindex.html" class="back link"><i class="icon icon-back"></i></a>
+						</div>
+						<!-- 标题元素（为了让页面切换时标题文字有滑动效果，添加sliding样式） -->
+						<div class="center navbar-title sliding">个人资料</div>
+						<div class="right" style="margin-right: 5px;"></div>
+					</div>
+				</div>
+				<!-- 页面容器（Pages container）由于我们使用了固定位置的navbar和toolbar，
+	              所以这里添加额外样式（navbar-through和toolbar-through）-->
+				<div class="pages navbar-through toolbar-through">
+					<!-- 首页, "data-page" 里设置页面名字 -->
+					<div data-page="index" class="page">
+						<!-- 支持滚动的页面内容  -->
+						<div class="page-content">
+							<div class="plysAva">
+								<span class="plysTou">头像</span>
+								<span class="plysAimg"><img src="img/round.png" style="width: 70px;"/></span>
+							</div>
+							<div class="plyAll niname">
+								<span class="plysTouB">昵称</span>
+								<span class="plysToutex">好名字</span>
+							</div>
+							<div class="plyAll personal-sex">
+								<span class="plysTouB">性别</span>
+								<span class="plysToutex">男</span>
+							</div>
+							<div class="plyAll personal-day" id="selectDate">
+								<span class="plysTouB">出生日期</span>
+								<span data-year="" data-month="" data-date="" class="plysToutex" id="showDate">点击这里选择时间</span>
+							</div>
+							<div class="plyAll personal-quali" id="showBank">
+								<span class="plysTouB">学历</span>
+								<span class="plysToutex" id="bankId">60-65 岁</span>
+							</div>
+							<div class="plyAll personal-blood" id="showBlood">
+								<span class="plysTouB">血型</span>
+								<span class="plysToutex" id="bloodId">A</span>
+							</div>
+							<div class="plyAll personal-const" id="showConst">
+								<span class="plysTouB">星座</span>
+								<span class="plysToutex" id="constId">金牛座</span>
+							</div>
+							<div class="plyAll personal-nat" id="showNat">
+								<span class="plysTouB">民族</span>
+								<span class="plysToutex" id="natId">汉族</span>
+							</div>
+							<div class="plyAll personal-samsool">
+								<span class="plysTouB">小学就读学校</span>
+								<span class="plysToutex">天津街坊小学</span>
+							</div>
+							<div class="plyAll personal-midsool">
+								<span class="plysTouB">初中就读学校</span>
+								<span class="plysToutex">天津第九十八中</span>
+							</div>
+							<div class="plyAll personal-higsool">
+								<span class="plysTouB">高中就读学校</span>
+								<span class="plysToutex">天津第九十八中</span>
+							</div>
+							<div class="plyAll personal-bigsool">
+								<span class="plysTouB">大学就读学校</span>
+								<span class="plysToutex">天津电子信息职业技术学院</span>
+							</div>
+							<div class="plyAll personal-city" id="select_contact">
+								<span class="plysTouB">出生地</span>
+								<span class="plysToutex" data-city-code="510100" data-province-code="510000" data-district-code="510105" id="show_contact">天津市天津市河东区</span>
+							</div>
+							<div class="plyAll personal-live" id="showlive">
+								<span class="plysTouB">居住情况</span>
+								<span class="plysToutex" id="liveId">暂未购房</span>
+							</div>
+							<div class="plyAll personal-marr" id="showmarr">
+								<span class="plysTouB">婚姻状况</span>
+								<span class="plysToutex" id="marrId">未婚</span>
+							</div>
+							<div class="plyAll personal-monthly " id="showMonthly">
+								<span class="plysTouB">月薪</span>
+								<span class="plysToutex" id="MonthlyId">2000以下</span>
+							</div>
+							<div class="plyAll personal-buye" id="showbuye">
+								<span class="plysTouB">购车情况</span>
+								<span class="plysToutex" id="buyeId">暂未购车</span>
+							</div>
+							<div class="plyAll personal-econ">
+								<span class="plysTouB">经济状况</span>
+								<span class="plysToutex">购买保险</span>
+							</div>
+							<div class="plyAll personal-occupa" id="showoccupa">
+								<span class="plysTouB">职业</span>
+								<span class="plysToutex" id="occupaId">实习生</span>
+							</div>
+							<div class="plyAll personal-colleges">
+								<span class="plysTouB">所在院校</span>
+								<span class="plysToutex">哈哈哈哈哈哈</span>
+							</div>
+							<div class="plyAll personal-physical ">
+								<span class="plysTouB">喜爱的体育运动</span>
+								<span class="plysToutex">足球，网球，篮球</span>
+							</div>
+							<div class="plyAll personal-food">
+								<span class="plysTouB">喜爱的食物</span>
+								<span class="plysToutex">大米饭</span>
+							</div>
+							<div class="plyAll personal-cream">
+								<span class="plysTouB">喜爱的电影</span>
+								<span class="plysToutex">古装武侠</span>
+							</div>
+							<div class="plyAll personal-gig">
+								<span class="plysTouB">喜爱的节目</span>
+								<span class="plysToutex">综艺</span>
+							</div>
+							<div class="plyAll personal-gLeisure">
+								<span class="plysTouB">休闲娱乐</span>
+								<span class="plysToutex">酒吧</span>
+							</div>
+							<div class="plyAll personal-hobby">
+								<span class="plysTouB">业余爱好</span>
+								<span class="plysToutex">摄影</span>
+							</div>
+							<div class="plyAll personal-mename">
+								<span class="plysTouB">真实姓名</span>
+								<span class="plysToutex">西门晓东</span>
+							</div>
+							<div class="plyAll personal-card">
+								<span class="plysTouB">身份证号</span>
+								<span class="plysToutex">**************1011</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--昵称-->
+		<div class="views vishow inameshow">
+			<p class="inea-title">为您自己起一个<span style="font-size: 25px;"> 与众不同 </span>的昵称吧</p>
+			<img src="img/1@2x.png" style="width: 100%;" />
+			<div class="tit-text">
+				<header class="inea-hander">
+					<span class="ineaclose">取消</span>
+					<span>昵称</span>
+					<span class="inea-shure">确认</span>
+				</header>
+				<article class="articleinme">
+					<input type="text" class="show-input" placeholder="请输入您的昵称" />
+				</article>
+			</div>
+		</div>
+		<!--性别-->
+		<div class="views vishow sexshow">
+			<p class="inea-title">我们根据您的性别为您<span style="font-size: 25px;"> 个性定制 </span>喜欢的内容</p>
+			<img src="img/2@2x.png" style="width: 100%;" />
+			<div class="tit-text">
+				<header class="inea-hander">
+					<span class="ineaclose">取消</span>
+					<span>性别</span>
+					<span class="inea-shure">确认</span>
+				</header>
+				<article class="articleinme">
+					<p class="sexshow-radiio"><img src="img/man@2x.png" class="sexshow-man" />男</p>
+					<p class="sexshow-radiio"><img src="img/lady@2x.png" class="sexshow-woman" />女</p>
+				</article>
+			</div>
+		</div>
+		<!--出生日期-->
+		<div class="alldiv datebirth">
+			<p class="inea-title">我们根据您的年龄为您<span style="font-size: 25px;"> 倾心推荐 </span>好的内容</p>
+			<img src="img/3@2x.png" style="width: 100%;" />
+			
+		</div>
+		<!--学历-->
+		<div class="alldiv qualifica">
+			<p class="inea-title">为您提供符合您专业的<span style="font-size: 25px;"> 专业信息 </span></p>
+			<img src="img/4@2x.png" style="width: 100%;" />
+
+		</div>
+		<!--血型-->
+		<div class="alldiv mebool">
+			<p class="inea-title">我们根据您的血型为您<span style="font-size: 25px;"> 精准分析 </span></p>
+			<img src="img/5@2x.png" style="width: 100%;" />
+
+		</div>
+		<!--星座-->
+		<div class="alldiv meconst">
+			<p class="inea-title">我们根据您的星座为您提供<span style="font-size: 25px;"> 更优质 </span>的咨询</p>
+			<img src="img/6@2x.png" style="width: 100%;" />
+
+		</div>
+		<!--民族-->
+		<div class="alldiv menat">
+			<p class="inea-title">在这里描绘出属于您民族的<span style="font-size: 25px;"> 独特印记 </span></p>
+			<img src="img/5@2x.png" style="width: 100%;" />
+
+		</div>
+		<!--小学-->
+		<div class="views vishow samsool">
+			<p class="inea-title">通过我们寻找您的<span style="font-size: 25px;"> 校友 </span></p>
+			<img src="img/8@2x.png" style="width: 100%;" />
+			<div class="tit-text">
+				<header class="inea-hander">
+					<span class="ineaclose">取消</span>
+					<span>小学就读学校</span>
+					<span class="inea-shure">确认</span>
+				</header>
+				<article class="articleinme">
+					<input type="text" class="show-input" placeholder="请输入" />
+				</article>
+			</div>
+		</div>
+		<!--初中-->
+		<div class="views vishow midsool">
+			<p class="inea-title">通过我们寻找您的<span style="font-size: 25px;"> 校友 </span></p>
+			<img src="img/8@2x.png" style="width: 100%;" />
+			<div class="tit-text">
+				<header class="inea-hander">
+					<span class="ineaclose">取消</span>
+					<span>初中就读学校</span>
+					<span class="inea-shure">确认</span>
+				</header>
+				<article class="articleinme">
+					<input type="text" class="show-input" placeholder="请输入" />
+				</article>
+			</div>
+		</div>
+		<!--高中-->
+		<div class="views vishow higsool">
+			<p class="inea-title">通过我们寻找您的<span style="font-size: 25px;"> 校友 </span></p>
+			<img src="img/8@2x.png" style="width: 100%;" />
+			<div class="tit-text">
+				<header class="inea-hander">
+					<span class="ineaclose">取消</span>
+					<span>高中就读学校</span>
+					<span class="inea-shure">确认</span>
+				</header>
+				<article class="articleinme">
+					<input type="text" class="show-input" placeholder="请输入" />
+				</article>
+			</div>
+		</div>
+		<!--大学-->
+		<div class="views vishow bigsool">
+			<p class="inea-title">通过我们寻找您的<span style="font-size: 25px;"> 校友 </span></p>
+			<img src="img/8@2x.png" style="width: 100%;" />
+			<div class="tit-text">
+				<header class="inea-hander">
+					<span class="ineaclose">取消</span>
+					<span>大学就读学校</span>
+					<span class="inea-shure">确认</span>
+				</header>
+				<article class="articleinme">
+					<input type="text" class="show-input" placeholder="请输入" />
+				</article>
+			</div>
+		</div>
+
+		<!--出生地-->
+		<div class="alldiv borncit">
+			<p class="inea-title">我们根据您的地区为您提供<span style="font-size: 25px;"> 特色优惠 </span></p>
+			<img src="img/8@2x.png" style="width: 100%;" />
+
+		</div>
+		<!--居住地-->
+		<div class="alldiv melive">
+			<p class="inea-title">我们根据您的星座为您提供<span style="font-size: 25px;"> 更优质 </span>的咨询</p>
+			<img src="img/6@2x.png" style="width: 100%;" />
+
+		</div>
+		<!--婚姻-->
+		<div class="alldiv memarr">
+			<p class="inea-title">在这里我们为您扩大您的<span style="font-size: 25px;"> 朋友圈 </span></p>
+			<img src="img/6@2x.png" style="width: 100%;" />
+
+		</div>
+		<!--月薪-->
+		<div class="alldiv monthly">
+			<p class="inea-title">为您提供更多的<span style="font-size: 25px;"> 优惠选择 </span></p>
+			<img src="img/6@2x.png" style="width: 100%;" />
+
+		</div>
+		<!--购车情况-->
+		<div class="alldiv buye">
+			<p class="inea-title">通过我们为您找寻相同兴趣的<span style="font-size: 25px;"> 车友 </span></p>
+			<img src="img/6@2x.png" style="width: 100%;" />
+
+		</div>
+		<!--经济条件-->
+		<div class="views vishow econ">
+			<p class="inea-title">更超值的理财产品为您<span style="font-size: 25px;"> 倾情推荐 </span></p>
+			<img src="img/6@2x.png" style="width: 100%;" />
+			<div class="tit-text">
+				<header class="inea-hander">
+					<span class="ineaclose">取消</span>
+					<span>经济状况</span>
+					<span class="inea-shure">确认</span>
+				</header>
+				<article>
+					<div class="artreadio">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">有外债贷款</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">银行存款</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">证劵投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">购买保险</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">银行存款</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">证劵投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">购买保险</span>
+						</p>
+
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">银行存款</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">证劵投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png"/ class="suspenhand"></span>
+							<span class="elremember ">购买保险</span>
+						</p>
+
+						<p class="elrp elrpa">
+							<span class="elrspanc"><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">银行存款</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc"><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">证劵投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc"><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">购买保险</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc"><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">购买保险</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc"><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">购买保险</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc"><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">购买保险</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc"><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">购买保险</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--职业-->
+		<div class="alldiv occupa">
+			<p class="inea-title">向您推荐与您职业更加契合的<span style="font-size: 25px;"> 专业信息 </span></p>
+			<img src="img/6@2x.png" style="width: 100%;" />
+		</div>
+		<!--所在院校-->
+		<div class="views vishow colleges">
+			<p class="inea-title">通过我们寻找您的<span style="font-size: 25px;"> 校友 </span></p>
+			<img src="img/8@2x.png" style="width: 100%;" />
+			<div class="tit-text">
+				<header class="inea-hander">
+					<span class="ineaclose">取消</span>
+					<span>所在院校</span>
+					<span class="inea-shure">确认</span>
+				</header>
+				<article class="articleinme">
+					<input type="text" class="show-input" placeholder="请输入" />
+				</article>
+			</div>
+		</div>
+			
+		<!--体育活动-->
+		<div class="views vishow physical">
+			<p class="inea-title">分享您的锻炼技巧铸就您的<span style="font-size: 25px;"> 达人梦想 </span></p>
+			<img src="img/6@2x.png" style="width: 100%;" />
+			<div class="tit-text">
+				<header class="inea-hander">
+					<span class="ineaclose">取消</span>
+					<span>喜爱的体育活动</span>
+					<span class="inea-shure">确认</span>
+				</header>
+				<article>
+					<div class="artreadio">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">足球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">篮球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">排球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">乒乓球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">羽毛球d</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">篮球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">排球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">乒乓球c</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">羽毛球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">篮球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">排球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">乒乓球b</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">羽毛球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">排球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">乒乓球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">羽毛球a</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--食物-->
+		<div class="views vishow food">
+			<p class="inea-title">选择您钟爱的没事为您推荐<span style="font-size: 25px;"> 最棒 </span>的餐厅</p>
+			<img src="img/6@2x.png" style="width: 100%;" />
+			<div class="tit-text">
+				<header class="inea-hander">
+					<span class="ineaclose">取消</span>
+					<span>喜爱的食物</span>
+					<span class="inea-shure">确认</span>
+				</header>
+				<article>
+					<div class="artreadio">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">鲁菜</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">篮球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">排球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">乒乓球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">羽毛球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">篮球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">排球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">乒乓球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">羽毛球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">篮球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">排球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">乒乓球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">羽毛球</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--电影-->
+		<div class="views vishow cream">
+			<p class="inea-title">我们为您提供平台讲述您的<span style="font-size: 25px;"> 电影故事 </span></p>
+			<img src="img/6@2x.png" style="width: 100%;" />
+			<div class="tit-text">
+				<header class="inea-hander">
+					<span class="ineaclose">取消</span>
+					<span>喜爱的电影</span>
+					<span class="inea-shure">确认</span>
+				</header>
+				<article>
+					<div class="artreadio">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">惊悚片</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">喜剧片</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">爱情片</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">科幻片</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--节目-->
+		<div class="views vishow gig">
+			<p class="inea-title">选择您喜欢的节目找<span style="font-size: 25px;"> 更合拍 </span>的发烧友</p>
+			<img src="img/6@2x.png" style="width: 100%;" />
+			<div class="tit-text">
+				<header class="inea-hander">
+					<span class="ineaclose">取消</span>
+					<span>喜爱的节目</span>
+					<span class="inea-shure">确认</span>
+				</header>
+				<article>
+					<div class="artreadio">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">政治事件</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">娱乐八卦</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">体育赛事</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">理财投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">理财投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">理财投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">理财投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">理财投资</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--娱乐-->
+		<div class="views vishow gLeisure">
+			<p class="inea-title">我们为您提供<span style="font-size: 25px;"> 最投脾气 </span>的新鲜话题</p>
+			<img src="img/6@2x.png" style="width: 100%;" />
+			<div class="tit-text">
+				<header class="inea-hander">
+					<span class="ineaclose">取消</span>
+					<span>休闲娱乐</span>
+					<span class="inea-shure">确认</span>
+				</header>
+				<article>
+					<div class="artreadio">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">酒吧</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">剧院</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">电影院</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">音乐会</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">温泉</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网吧</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">理财投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">理财投资</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--业余爱好-->
+		<div class="views vishow hobby">
+			<p class="inea-title">选择您钟意的业余爱好找<span style="font-size: 25px;"> 志同道合 </span>的朋友</p>
+			<img src="img/6@2x.png" style="width: 100%;" />
+			<div class="tit-text">
+				<header class="inea-hander">
+					<span class="ineaclose">取消</span>
+					<span>业余爱好</span>
+					<span class="inea-shure">确认</span>
+				</header>
+				<article>
+					<div class="artreadio">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网络游戏</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">汽车</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">动物</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">摄影</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">唱歌</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">跳舞</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">读书</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">绘画</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--真实姓名-->
+		<div class="views vishow mename">
+			<p class="inea-title">在这里留下您的<span style="font-size: 25px;"> 鼎鼎大名 </span></p>
+			<img src="img/8@2x.png" style="width: 100%;" />
+			<div class="tit-text">
+				<header class="inea-hander">
+					<span class="ineaclose">取消</span>
+					<span>真实姓名</span>
+					<span class="inea-shure">确认</span>
+				</header>
+				<article class="articleinme">
+					<input type="text" class="show-input" placeholder="请输入" />
+				</article>
+			</div>
+		</div>
+		<!--身份证号-->
+		<div class="views vishow carda">
+			<p class="inea-title">写下您最<span style="font-size: 25px;"> 独一无二 </span>的证件号码</p>
+			<img src="img/8@2x.png" style="width: 100%;" />
+			<div class="tit-text">
+				<header class="inea-hander">
+					<span class="ineaclose">取消</span>
+					<span>身份证号</span>
+					<span class="inea-shure">确认</span>
+				</header>
+				<article class="articleinme">
+					<input type="text" class="show-input" placeholder="请输入" />
+				</article>
+			</div>
+		</div>
+		<!-- Framework7框架的js-->
+		<script type="text/javascript" src="dist/js/framework7.min.js"></script>
+		<!-- 你的应用的js -->
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/moblie.js" type="text/javascript" charset="utf-8"></script>
+		<!--模拟ios下拉-->
+		<!--出生日期-->
+		<script src="js/date.js" type="text/javascript" charset="utf-8"></script>
+		<!--出生地-->
+		<script src="js/city.js" type="text/javascript" charset="utf-8"></script>
+		<!--其他的-->
+		<script src="js/total-data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/example.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/iosSelect.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>

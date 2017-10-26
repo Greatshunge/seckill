@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title></title>
+		<!-- 使用iOS CSS主题样式-->
+		<link rel="stylesheet" href="../dist/css/framework7.ios.min.css">
+		<!-- iOS related颜色样式 -->
+		<link rel="stylesheet" href="../dist/css/framework7.ios.colors.min.css">
+		<!-- 自定义样式-->
+		<link rel="stylesheet" href="../dist/css/my-app.css">
+		<link rel="stylesheet" type="text/css" href="../css/moblie.css" />
+		<!--模拟ios下拉-->
+		<link rel="stylesheet" type="text/css" href="../css/iosSelect.css" />
+	</head>
+
+	<body>
+		<div class=" qualifica">
+			<p class="inea-title">为您提供符合您专业的<span style="font-size: 25px;"> 专业信息 </span></p>
+			<img src="../img/4@2x.png" style="width: 100%;" />
+
+		</div>
+	</body>
+	<!-- Framework7框架的js-->
+	<script type="text/javascript" src="../js/registration-framework7.min.js"></script>
+	<!-- 你的应用的js -->
+	<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/moblie.js" type="text/javascript" charset="utf-8"></script>
+	<!--模拟ios下拉-->
+	<!--出生日期-->
+	<script src="../js/date.js" type="text/javascript" charset="utf-8"></script>
+	<!--出生地-->
+	<script src="../js/city.js" type="text/javascript" charset="utf-8"></script>
+	<!--其他的-->
+	<script src="../js/total-data.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/examplea.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+	<script src="iosSelectB.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var self = this;
+		var all_html = [
+			'<header  class="iosselect-header">',
+			'<a href="星座.html"><img src="../img/rop@2x.png"class="rop" /></a>',
+			'<h2 id="iosSelectTitle"></h2>',
+			'<a  href="学历.html" class="close">上一步</a>',
+			'<a  href="星座.html" class="sure suraba shure-sexshow">确定</a>',
+			'</header>',
+			'<section class="iosselect-box">',
+			'<div class="one-level-contain" id="oneLevelContain">',
+			'<ul class="select-one-level">',
+			'</ul>',
+			'</div>',
+			'<div class="two-level-contain" id="twoLevelContain">',
+			'<ul class="select-two-level">',
+			'</ul>',
+			'</div>',
+			'<div class="three-level-contain" id="threeLevelContain">',
+			'<ul class="select-three-level">',
+			'</ul>',
+			'</div>',
+			'<div class="four-level-contain" id="fourLevelContain">',
+			'<ul class="select-four-level">',
+			'</ul>',
+			'</div>',
+			'<div class="five-level-contain" id="fiveLevelContain">',
+			'<ul class="select-five-level">',
+			'</ul>',
+			'</div>',
+			'</section>',
+			'<hr class="cover-area1"/>',
+			'<hr class="cover-area2"/>',
+			'<div class="ios-select-loading-box" id="iosSelectLoadingBox">',
+			'<div class="ios-select-loading"></div>',
+			'</div>'
+		].join('\r\n');
+
+		$(document).ready(function() {
+			var bankSelect = new IosSelect(1, [bool], {
+				container: '.container',
+				title: '血型',
+				itemHeight: 80,
+				itemShowCount: 3,
+				callback: function(selectOneObj) {
+					bankIdDomBlood.value = selectOneObj.id;
+					bankIdDomBlood.innerHTML = selectOneObj.value;
+					showBankDomBlood.dataset['id'] = selectOneObj.id;
+					showBankDomBlood.dataset['value'] = selectOneObj.value;
+				}
+			});
+		});
+	</script>
+
+</html>

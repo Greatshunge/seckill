@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/css/index_style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
+    <title>版本发布工具</title>
+</head>
+<body class="my-index">
+    <header id="header">
+        <div id="topbar">
+            <h2 id="versionPub">
+                版本发布系统
+            </h2>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="left_con">
+            <div class="left_con_v1">
+                <div class="ng_scope">
+                    <div class="sidebar_inner ng_scope">
+                        <div class="sidebar_fold" id="addProduct">
+                            新增产品
+                        </div>
+                        <div id="ng_scope">
+                            <div class="sidebar_nav">
+                               <!-- <div class="sidebar_title">
+                                    <div class="sidebar_title_inner">
+                                        <span class="sidebar_title_icon">
+                                        </span>
+                                        <span class="sidebar_span">产品</span>
+                                    </div>
+                                </div>
+
+                                <ul class="sidebar_trans">
+                                    <li class="nav_item">
+                                        <a href="javascript:;" class="sidebar_trans">
+                                            <div class="nav_icon">
+                                                <span class="icon_ecs">项目1</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right_con">
+            <div class="view_product">
+                <div class="view_container">
+                    <div class="view_col">
+                        <div class="view_con">
+                            <div class="container">
+                                <div id="addProject" class="add_project" style="display: none">
+                                    <input type="button" value="添加项目" id="btn_pro_add"/>
+                                </div>
+                                <div class="panel panel_default">
+                                    <div class="panel-heading text-center">
+                                        <h3>版本列表</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <table class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th>版本名</th>
+                                                <th>版本URL</th>
+                                                <th>版本描述</th>
+                                                <th>上传时间</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="tbody_ver">
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div style="float: right">
+                                            <input id="file" type="file" name="file" value="请上传版本"/><br>
+                                            <input id="uploadFile" type="button" value="上传" name="button"/>
+                                            <input id="cancelUp" type="button" value="取消" name="button"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ser_fix">
+                                <div class="container">
+                                    <div class="panel panel_default">
+                                        <div class="panel-heading text-center">
+                                            <h3>我的服务器</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th>服务器名</th>
+                                                    <th>IP</th>
+                                                    <th>端口号</th>
+                                                    <th>当前版本</th>
+                                                    <th>版本更新时间</th>
+                                                    <th>描述</th>
+                                                    <th>创建时间</th>
+                                                    <th>选择服务器</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="tbody_ser"></tbody>
+                                            </table>
+                                            <div style="float: right">
+                                                <input type="button" id="btn_update" name="update" value="更新"/>
+                                                <input type="button" id="btn_add" name="add" value="新增"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--新增项目弹窗-->
+    <div class="modal fade" id="add_project" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">新增项目</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label for="proj_name">项目名</label>
+                        <input type="text" name="txt_departmentname" class="form-control" id="proj_name" placeholder="请输入项目名">
+                    </div>
+                    <div class="form-group">
+                        <label for="proj_desc">产品描述</label>
+                        <input type="text" name="txt_statu" class="form-control" id="proj_desc" placeholder="请输入产品描述">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+                    <button type="button" id="btn_proj_submit" class="btn btn-primary" ><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--新增产品弹窗-->
+    <div class="modal fade" id="add_product" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">新增产品</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label for="prod_name">产品名</label>
+                        <input type="text" name="txt_departmentname" class="form-control" id="prod_name" placeholder="请输入产品名">
+                    </div>
+                    <div class="form-group">
+                        <label for="prod_desc">产品描述</label>
+                        <input type="text" name="txt_statu" class="form-control" id="prod_desc" placeholder="请输入产品描述">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+                    <button type="button" id="btn_prod_submit" class="btn btn-primary" ><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--新增服务弹窗-->
+    <div class="modal fade" id="add_myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">新增服务</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label for="txt_name">服务器名</label>
+                        <input type="text" name="txt_departmentname" class="form-control" id="txt_name" placeholder="服务器名">
+                    </div>
+                    <div class="form-group">
+                        <label for="txt_ip">IP</label>
+                        <input type="text" name="txt_parentdepartment" class="form-control" id="txt_ip" placeholder="IP">
+                    </div>
+                    <div class="form-group">
+                        <label for="txt_port">端口号</label>
+                        <input type="text" name="txt_departmentlevel" class="form-control" id="txt_port" placeholder="端口号">
+                    </div>
+                    <div class="form-group">
+                        <label for="checkbox_ver">当前版本</label>
+                        <select name="checkbox_statu" class="form-control" id="checkbox_ver">
+                            <option value="-1">请选择版本</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="txt_desc">描述</label>
+                        <input type="text" name="txt_statu" class="form-control" id="txt_desc" placeholder="描述">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+                    <button type="button" id="btn_add_submit" class="btn btn-primary" ><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--更新弹窗-->
+    <div class="modal fade" id="update_myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">更新</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label for="txt_name">选择的服务器有：</label>
+                        <div id="sel_serv_name">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkbox_ver">当前版本：</label>
+                        <select name="checkbox_statu" class="form-control" id="update_ver">
+                            <option value="-1">请选择版本：</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btn_update_cancel" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+                    <button type="button" id="btn_update_submit" class="btn btn-primary" ><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>更新</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/script/index.js"></script>
+</html>

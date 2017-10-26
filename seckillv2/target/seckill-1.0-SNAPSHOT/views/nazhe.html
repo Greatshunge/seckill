@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>高德地图</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <link rel="stylesheet" href="../css/nazhestyle.css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<div id="outer-box">
+    <div id="container" tabindex="0">
+    </div>
+    <div style="position: absolute;left: 10px;top: 20px;">
+        <a><img width="50%" src="../nazheimg/icon_home.png"></a>
+    </div>
+    <div class="search_home_btn">
+        <a href="javascript:;" id="searchome"><img width="50%" src="../nazheimg/icon_search_home.png"></a>
+    </div>
+    <div class="scanning_qrcode">
+            <img class="qr_code" src="../nazheimg/qrcode.png"/>
+            <img src="../nazheimg/scanning.png"/>
+    </div>
+    <div class="container-fluid" style="display: none">
+        <div class="search_home">
+            <a href="javascript:; " id="backMap"><img class="back_map" src="../nazheimg/back.png"></a>
+            <h4 class="text-center">筛选</h4>
+            <hr style="margin-top: 0px;">
+            <div class="first_btn background_img">
+                低电选择
+            </div>
+            <div style="width:100%;" class="abgs_a">
+                <form class="form-horizontal col-sm-12" role="form">
+                    <div class="form-group label_a div_left">
+                        <div class="col-sm-4 col-xs-10">
+                            <div id="text_xa_">当前选择:3%</div>
+                            <div id="box_">
+                                <div id="bg_">
+                                    <div id="bgcolor_"></div>
+                                </div>
+                                <div id="bt_"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="second_btn background_img">
+                全部车辆
+            </div>
+            <div class="row" style="margin-left: 0px;">
+                <div class="col-xs-5 background_img third_btn">
+                    待检测车辆
+                </div>
+                <div class="col-xs-5 background_img fourth_btn">
+                    待回收车辆
+                </div>
+            </div>
+            <div class="background_img fifth_btn">
+                异常移动车辆
+            </div>
+            <div style="margin-left: 22%;margin-top: 16%;"><img src="../nazheimg/makeback.png"></div>
+        </div>
+    </div>
+    <div id="panel">
+
+    </div>
+    <!--<div id="panel2">
+
+    </div>-->
+</div>
+</body>
+<script type="text/javascript" src="../script/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="//webapi.amap.com/maps?v=1.4.0&key=c1e111ca8146288da1943b59e6031b15&plugin=AMap.Walking"></script>
+<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+<script type="text/javascript" src="http://cache.amap.com/lbs/static/WalkingRender1230.js"></script>
+<script src="http://webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+<script type="text/javascript">
+    
+    $("#searchome").on("click",function () {
+        $(".container-fluid").show();
+    });
+    
+    $("#backMap").on("click",function () {
+        $(".container-fluid").hide();
+    });
+
+    var map,geolocation;
+    map = new AMap.Map('container',{
+        resizeEnable: true
+    });
+
+    //自定义定位标记
+    var toolBar;
+    var customMarker = new AMap.Marker({
+        offset: new AMap.Pixel(-14, -34),//相对于基点的位置
+        icon: new AMap.Icon({  //复杂图标
+            size: new AMap.Size(27, 36),//图标大小
+            image: "../img/dingwei.png", //大图地址
+            imageOffset: new AMap.Pixel(-28, 0)//相对于大图的取图位置
+        })
+    });
+
+    map.plugin('AMap.Geolocation', function () {
+        geolocation = new AMap.Geolocation({
+            enableHighAccuracy: true,//是否使用高精度定位，默认:true
+            timeout: 10000,          //超过10秒后停止定位，默认：无穷大
+            maximumAge: 0,           //定位结果缓存0毫秒，默认：0
+            convert: true,           //自动偏移坐标，偏移后的坐标为高德坐标，默认：true
+            showButton: true,        //显示定位按钮，默认：true
+            buttonPosition: 'LB',    //定位按钮停靠位置，默认：'LB'，左下角
+            buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+            showMarker: true,        //定位成功后在定位到的位置显示点标记，默认：true
+            showCircle: true,        //定位成功后用圆圈表示定位精度范围，默认：true
+            panToLocation: true,     //定位成功后将定位到的位置作为地图中心点，默认：true
+            zoomToAccuracy:true      //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+        });
+        map.addControl(geolocation);
+        geolocation.getCurrentPosition();
+        AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
+       // AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
+    });
+
+    var currentLng;
+    var currentLat;
+
+    //解析定位结果
+   function onComplete(data) {
+       // 根据起终点经纬度规划驾车导航路线
+       currentLng =  data.position.getLng();
+       currentLat = data.position.getLat();
+       /*var str=['定位成功'];
+        str.push('经度：' + data.position.getLng());
+        str.push('纬度：' + data.position.getLat());
+
+        if(data.accuracy){
+            str.push('精度：' + data.accuracy + ' 米');
+        }//如为IP精确定位结果则没有精度信息
+        str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
+       // document.getElementById('tip').innerHTML = str.join('<br>');
+       console.log(str);*/
+    }
+    /*
+    //解析定位错误信息
+    function onError(data) {
+        document.getElementById('tip').innerHTML = '定位失败';
+    }*/
+
+    //地图中添加地图操作ToolBar插件
+   /* map.plugin(["AMap.ToolBar"], function() {
+        toolBar = new AMap.ToolBar({locationMarker: customMarker}); //设置地位标记为自定义标记
+        map.addControl(toolBar);
+    });*/
+
+    AMapUI.loadUI(['misc/MarkerList', 'overlay/SimpleMarker', 'overlay/SimpleInfoWindow'],
+        function(MarkerList, SimpleMarker, SimpleInfoWindow) {
+
+            var markerList = new MarkerList({
+                //关联的map对象
+                map: map,
+                //列表的dom容器的id
+                //listContainer: 'my-list',
+
+                //置空默认的选中行为，后续监听selectedChanged中处理
+                onSelected: null,
+
+                //返回数据项的Id
+                getDataId: function(dataItem, index) {
+                    //index表示该数据项在数组中的索引位置，从0开始，如果确实没有id，可以返回index代替
+                    return dataItem.id;
+                },
+                //返回数据项的位置信息，需要是AMap.LngLat实例，或者是经纬度数组，比如[116.789806, 39.904989]
+                getPosition: function(dataItem) {
+                    return dataItem.position;
+                },
+                //返回数据项对应的Marker
+                getMarker: function(dataItem, context, recycledMarker) {
+
+                    //存在可回收利用的marker
+                    if (recycledMarker) {
+                        //直接更新内容返回
+                        recycledMarker.setIconLabel(context.id);
+                        //recycledMarker.setIconStyle(dataItem.iconStyle);
+                        return recycledMarker;
+                    }
+
+                    //返回一个新的Marker
+                    return new SimpleMarker({
+                        containerClassNames: 'my-marker',
+                        iconStyle: '<div style="background-image:url('+"../nazheimg/che.png"+');' +
+                        'background-size: 100% 100%;width: 38px;height: 42px"></div>'
+                        // iconLabel: context.id
+                    });
+                },
+                //返回数据项对应的infoWindow
+                /*getInfoWindow: function(dataItem, context, recycledInfoWindow) {
+
+                    if (recycledInfoWindow) {
+                        //存在可回收利用的infoWindow, 直接更新内容返回
+                        recycledInfoWindow.setInfoTitle(dataItem.title);
+                        recycledInfoWindow.setInfoBody(dataItem.desc);
+                        return recycledInfoWindow;
+                    }
+
+                    //返回一个新的InfoWindow
+                    return new SimpleInfoWindow({
+
+                        offset: new AMap.Pixel(0, -37),
+                        infoTitle: dataItem.title,
+                        infoBody: dataItem.desc
+                    });
+                }*/
+               /* getListElement: function(dataItem, context, recycledListElement) {
+
+                    var tpl = '<button style="background-image: url('+"../img/che.png"+')">' +
+                        '<%- dataId %></button> <%- dataItem.title %>';
+
+                    var content = MarkerList.utils.template(tpl, {
+                        dataItem: dataItem,
+                        dataId: context.id
+                    });
+
+                    if (recycledListElement) {
+                        //存在可回收利用的listElement, 直接更新内容返回
+                        recycledListElement.innerHTML = content;
+                        return recycledListElement;
+                    }
+
+                    //返回一段html，MarkerList将利用此html构建一个新的dom节点
+                    return '<li>' + content + '</li>';
+                }*/
+
+            });
+
+            //监听选中改变
+            markerList.on('selectedChanged', function(event, info) {
+                debugger
+                var markerLng = info.selected.data.position[0];
+                var markerLat = info.selected.data.position[1];
+                walking.search(new AMap.LngLat(currentLng, currentLat), new AMap.LngLat(markerLng, markerLat));
+            });
+
+            //构建一个数据项数组，数据项本身没有格式要求，但需要支持下述的getDataId和getPosition
+            var data = [{
+                id: 'A',
+                position: [113.908964, 22.570589]
+               /* title: '标题_1',
+                desc: '描述_1'*/
+            }, {
+                id: 'B',
+                position: [113.908985, 22.574589]
+               /* title: '标题_2',
+                desc: '描述_2'*/
+            }, {
+                id: 'C',
+                position: [113.908906, 22.575589]
+                /*title: '标题_3',
+                desc: '描述_3'*/
+            }];
+
+            //展示该数据
+            markerList.render(data);
+        });
+
+    //构造路线导航类
+    /*var driving = new AMap.Driving({
+        map: map,
+        panel: "panel2"
+    });*/
+
+    //步行导航
+    var walking = new AMap.Walking({
+        map: map
+//        panel: "panel2"
+    });
+
+
+
+    // 进度条2
+    $(window).ready(function jindu($) {
+        var $box = $('#box_');
+        var $bg = $('#bg_');
+        var $bgcolor = $('#bgcolor_');
+        var $btn = $('#bt_');
+        var $text = $('#text_xa_');
+        var statu = false;
+        var ox = 0;
+        var lx = 0;
+        var left = 100;
+        var bgleft = 0;
+        $btn.on("touchstart",function(e) {
+            lx = $btn.offset().left;
+            ox = e.originalEvent.touches[0].pageX - left;
+            statu = true;
+        });
+        $btn.on("touchend",function() {
+            statu = false;
+        });
+        $box.on("touchmove",function(e) {
+            if (statu) {
+                left = e.originalEvent.touches[0].pageX - ox;
+                if (left < 0) {
+                    left = 0;
+                }
+                if (left > 200) {
+                    left = 200;
+                }
+                $btn.css('left', left);
+                $bgcolor.width(left);
+                $text.html('当前选择:' + parseInt(left / 2) + '%');
+            }
+        });
+        $bg.click(function(e) {
+            if (!statu) {
+                bgleft = $bg.offset().left;
+                left = e.pageX - bgleft;
+                if (left < 0) {
+                    left = 0;
+                }
+                if (left > 200) {
+                    left = 200;
+                }
+                $btn.css('left', left);
+                $bgcolor.stop().animate({
+                    width: left
+                }, 200);
+                $text.html('当前选择:' + parseInt(left / 2) + '%');
+            }
+        });
+    })
+
+
+</script>
+</html>

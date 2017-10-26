@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- meta标签设置-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,
+     maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+			<meta name="apple-mobile-web-app-capable" content="yes">
+			<meta name="apple-mobile-web-app-status-bar-style" content="black">
+			<!-- app标题 -->
+			<title></title>
+			<!-- 使用iOS CSS主题样式-->
+			<link rel="stylesheet" href="dist/css/framework7.ios.min.css">
+			<!-- iOS related颜色样式 -->
+			<link rel="stylesheet" href="dist/css/framework7.ios.colors.min.css">
+			<!-- 自定义样式-->
+			<link rel="stylesheet" href="dist/css/my-app.css">
+			<link rel="stylesheet" type="text/css" href="css/moblie.css" />
+
+	</head>
+
+	<body>
+		<!-- 所有的Views视图 -->
+		<div class="views ">
+			<div id="homeView" class="view view-main tab active" data-page="homeView">
+				<!-- 主视图（需要有"view-main"样式） -->
+				<div class="view view-main">
+					<!-- 顶部导航栏 -->
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="left">
+								<a href="index_publish.html" class="back link"><i class="icon icon-back"></i></a>
+							</div>
+							<div class="center navbar-title sliding">详情</div>
+							<div class="right" style="margin-right: 5px;"></div>
+						</div>
+					</div>
+					<!-- 页面容器（Pages container）由于我们使用了固定位置的navbar和toolbar，
+              所以这里添加额外样式（navbar-through和toolbar-through）-->
+					<div class="pages navbar-through toolbar-through">
+						<!-- 首页, "data-page" 里设置页面名字 -->
+						<div data-page="index" class="page">
+							<!-- 支持滚动的页面内容  -->
+							<div class="page-content">
+								<div class=" publishDetail">
+									<div class="publish">
+										<span class="publishTitlie">标题</span>
+										<span>
+												<img src="img/nopass@2x.png" class="publishImg"/>
+											</span>
+									</div>
+									<p class="publishPacct" style="float: left;">
+										<img src="img/author@2x.png" class="detailImg" />
+										<span>鲍树阁</span>发布
+									</p>
+									<p class="publishPacct" style="float: right;">
+										<img src="img/time@2x.png" class="detailImg" />
+										<span>2017.03.18 14:22</span>
+									</p>
+									<div style="clear: both;"></div>
+									<div class="detailActive">
+										<p>
+											美军侯任战略司令约翰·海腾20日参加了美国参议院军事委员会批准听证会，他表示：“可能性最大的威胁和最令人担忧的就是朝鲜。”他还指出，虽然朝鲜的核、导弹技术尚未达到俄罗斯和中国一样的水平，但问题是朝鲜的不可预测和其持续开发以美国本土为打击目标的技术。被问到朝鲜何时会完成搭载核弹头的洲际弹道导弹（ICBM）时，海腾表示：“只是时间问题，最终会完成的。”他还表示，应把朝鲜核、导弹开发问题“作为最优先课题”。
+										</p>
+										<p>
+											卡特当天还数次提到了在朝核危机初期上世纪90年代担任国防长官的威廉·佩里。威廉·佩里1993年-1994年在朝鲜半岛处于核危机时向当时就任国防部常务副部长的卡特指示，制定进行先发制人打击的计划“宁边攻击计划”。两人于2006年针对朝核设施曾经主张“精密打击”。
+										</p>
+										<p class="activeImg">
+											<img src="img/1.jpg" />
+										</p>
+										<P>
+											报道称，9日朝鲜进行第5次核试验后，美国外交界已经有声音提到对朝鲜的“军事措施”。在奥巴马政府初期担任参谋长联席会议主席的迈克尔·马伦16日在美国外交协会主办的讨论会上表示：“朝鲜的能力接近可以攻击美国，如果实际上对美国构成威胁，（美国）从自卫层面上对朝鲜进行先发制人的打击是可能的。”
+										</P>
+									</div>
+									<div class="detailBtn">
+										<a href="#"><img src="img/btn-cancel@2x.png"/></a>
+										<a href="#"><img src="img/btn-edit@2x.png"/></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Framework7框架的js-->
+		<script type="text/javascript" src="dist/js/framework7.min.js"></script>
+		<!-- 你的应用的js -->
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/moblie.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

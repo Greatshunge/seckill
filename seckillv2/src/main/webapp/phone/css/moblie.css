@@ -1,0 +1,1600 @@
+/*登录*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.moblie {
+	width: 100%;
+	height: 100%;
+	background: url(../img/background.png) no-repeat;
+	background-size: 100%;
+}
+
+.moblogo {
+	max-width: 104px;
+	margin: 0 auto;
+	padding-top: 25%;
+	text-align: center;
+}
+
+.mobbody {
+	max-width: 486px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.mobinput {
+	max-width: 406px;
+	width: 80%;
+	height: 40px;
+	outline: none;
+	border: 0px;
+	border-bottom: 2px solid #E8615E;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #bbbbbb;
+	text-indent: 10px;
+}
+
+.mobmargin {
+	width: 100%;
+	margin-top: 35px;
+	text-align: center;
+}
+
+.smaicon {
+	margin-right: 15px;
+}
+
+.mobinputa {
+	max-width: 191px;
+	width: 43%;
+	height: 40px;
+	outline: none;
+	background-color: #FFFFFF;
+	border: 0px;
+	border-bottom: 2px solid #E8615E;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #bbbbbb;
+	text-indent: 10px;
+}
+
+.mobget {
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+.mobbutton {
+	max-width: 486px;
+	width: 100%;
+	height: 60px;
+	outline: none;
+	border-radius: 10px;
+	border: 0px;
+	background: url(../img/signin_btn.png) no-repeat;
+	background-size: 100%;
+}
+
+.gimg {
+	width: auto\9;
+	height: auto;
+	width: 10%;
+	max-width: 60px;
+	vertical-align: middle;
+}
+
+.ggetimg {
+	height: 100%;
+	width: 35%;
+	max-width: 190px;
+	margin-left: 2%;
+}
+
+@media all and (min-width: 470px) {
+	.mobbutton {
+		height: 80px;
+	}
+}
+
+
+/*我的*/
+
+.navbar .navbar-title {
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: #333333;
+	text-align: center;
+	font-weight: 400;
+}
+
+.Notif {
+	width: 25px;
+}
+
+.avatarAll {
+	background-color: #FFFFFF;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.avatarImg {
+	border: 1px;
+	width: 60px;
+	height: 60px;
+	float: left;
+	padding-top: 10px;
+}
+
+.avatarTex {
+	display: inline-block;
+	float: left;
+	margin-left: 5px;
+}
+
+.avatarNex {
+	display: inline-block;
+	float: right;
+	margin-top: 9%;
+}
+
+.avatarTexname {
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: #333333;
+}
+
+.avatarTextype {
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #BBBBBB;
+	margin-top: -13px;
+}
+
+.meAll {
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	padding-right: 10px;
+	font-family: "微软雅黑";
+	color: #333333;
+}
+
+.metex {
+	display: inline-block;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #333333;
+}
+
+.meBj {
+	width: 25px;
+	vertical-align: middle;
+	margin-left: 20px;
+	margin-right: 10px;
+}
+
+.meNex {
+	margin: 0px;
+	margin-top: 10px;
+	float: right;
+}
+
+.iconX {
+	background: url(../img/message2.png) no-repeat;
+}
+
+.iconXb {
+	background: url(../img/message.png) no-repeat;
+}
+
+.iconF {
+	background: url(../img/publish.png) no-repeat;
+}
+
+.iconFa {
+	background: url(../img/publish2.png) no-repeat;
+}
+
+.iconM {
+	background: url(../img/me.png) no-repeat;
+}
+
+.iconMc {
+	background: url(../img/me2.png) no-repeat;
+}
+
+.iconn {
+	color: #BBBBBB;
+}
+
+.iconnc {
+	color: #E8615E;
+}
+
+
+/*个人资料*/
+
+.plysAva {
+	height: 100px;
+	background-color: #FFFFFF;
+	line-height: 100px;
+}
+
+.plysTou {
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: #333333;
+	padding-left: 20px;
+}
+
+.plysAimg {
+	float: right;
+	margin-top: 15px;
+	margin-right: 20px;
+	height: 70px;
+}
+
+.plyAll {
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	padding-right: 10px;
+	height: 45px;
+	overflow: hidden;
+}
+
+.plyNex {
+	float: right;
+}
+
+.plysTouB {
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: #333333;
+	padding-left: 10px;
+	line-height: 45px;
+}
+
+.plysToutex {
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: #848484;
+	padding-left: 8px;
+	line-height: 45px;
+	float: right;
+	width: 160px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: right;
+	border: 0px;
+}
+
+
+/*我的团队财富*/
+
+.samledeHold {
+	overflow: hidden;
+}
+
+.samleTou {
+	margin: 10px;
+	border-radius: 100px;
+	width: 20%;
+	float: left;
+}
+
+.samledePe {
+	font-family: "微软雅黑";
+	float: left;
+	font-size: 16px;
+}
+
+.samlede-number {
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: #e8615e;
+	margin: 0px;
+}
+
+.samlede-team {
+	float: right;
+	margin-right: 10px;
+	width: 30%;
+	margin-top: 15px;
+}
+
+.samle-tmbtn {
+	float: right;
+	width: 100%;
+}
+
+.content-ber {
+	display: inline-block;
+	width: 25%;
+	margin: 0px 3%;
+	margin-top: 20px;
+}
+
+.member {
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #bbbbbb;
+	border-radius: 5px;
+}
+
+.membp {
+	margin: 0;
+	width: 100%;
+	text-align: center;
+	margin-top: 4%;
+	font-size: 14px;
+}
+
+.memb-img {
+	width: 100%;
+}
+
+.memb-text {
+	width: 100%;
+	height: 23%;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	top: 72%;
+	margin: 0px;
+	color: #fff;
+	padding-top: 5%;
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+/*团队弹框*/
+
+.overlayer {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/box.png);
+	z-index: 5001;
+	display: none;
+}
+
+.teampop {
+	display: none;
+}
+
+.teampopbbz {
+	width: 50%;
+	position: fixed;
+	top: 60%;
+	left: 50%;
+	margin: -230px 0 0 -80px;
+	border-radius: 29px 29px 0px 0px;
+	z-index: 5002;
+	border: 1px solid #BBBBBB;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+}
+
+.lanimgz {
+	border-radius: 5px;
+	width: 100%;
+}
+
+.casez {
+	width: 100%;
+	height: 25px;
+	background: rgba(0, 0, 0, 0.5);
+	background: #000000\9;
+	filter: alpha(opacity=50);
+	position: relative;
+	top: -30px;
+	overflow: hidden;
+}
+
+.span_casez {
+	width: 90%;
+	text-align: center;
+	margin: auto;
+	font-size: 18px;
+	font-family: "微软雅黑";
+	color: #FFFFFF;
+}
+
+.btn-close {
+	position: absolute;
+	left: 258px;
+	top: 10px;
+	z-index: 5002;
+}
+
+.teamDiv {
+	margin-top: 20px;
+}
+
+.temP {
+	margin: 0px;
+	float: left;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #999999;
+	margin-left: 12px;
+	text-align: left;
+	letter-spacing: 1px;
+}
+
+.teamSpan {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #333333;
+	margin-left: 0px;
+}
+
+.mobteam-input {
+	font-family: "微软雅黑";
+	width: 100%;
+	height: 25px;
+	background-color: #fff;
+	font-size: 14px;
+	border: 0px;
+	border-top: 1px solid #bbb;
+	margin-top: 10px;
+	border-radius: 0px 0px 5px 5px;
+	margin: 0;
+	text-align: center;
+	line-height: 25px;
+}
+
+
+/*财富团队分享链接*/
+
+.teampopShare {
+	width: 100%;
+	position: fixed;
+	top: 75%;
+	z-index: 5002;
+	border: 1px solid #BBBBBB;
+	background-color: #FFFFFF;
+}
+
+.teampopShare .teamshare {
+	font-family: "微软雅黑";
+	color: #333333;
+	height: 200px;
+}
+
+.teampopShare .teamshare .share0n {
+	margin: 0;
+	width: 100%;
+	font-size: 14px;
+	text-indent: 10px;
+	line-height: 30px;
+}
+
+.teampopShare .teamshare .shareText {
+	width: 18%;
+	display: inline-block;
+	margin-left: 2px;
+	text-align: center;
+}
+
+.teampopShare .teamshare .shareText .shareImg {
+	width: 85%;
+}
+
+.teampopShare .teamshare .shareText .shareName {
+	margin: 0;
+	font-size: 14px;
+}
+
+.shareClose {
+	background-color: #F0F0F0;
+	margin: 0 auto;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	line-height: 30px;
+	height: 30px;
+	border-bottom: 1px solid #bbb;
+}
+
+
+/*个人资料*/
+
+.samle-invite {
+	text-indent: 20px;
+	padding-bottom: 10px;
+}
+
+.articleinme {
+	text-align: center;
+	overflow: hidden;
+}
+
+.show-input {
+	width: 65%;
+	height: 45px;
+	border-radius: 20px;
+	background-color: #ffe8e8;
+	outline: none;
+	border: 2px solid #e8615e;
+	text-align: center;
+	color: #333333;
+	font-size: 16px;
+	margin-top: 15%;
+	margin-bottom: 40%;
+}
+
+.alldiv {
+	display: none;
+}
+
+.vishow {
+	display: none;
+}
+
+.inea-title {
+	font-family: '微软雅黑';
+	font-size: 16px;
+	color: #e8615e;
+	text-align: center;
+}
+
+.inea-hander {
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	height: 50px;
+	line-height: 50px;
+}
+
+.tit-text {
+	box-shadow: 0px -15px 30px #bbb;
+}
+
+a .ineaclosea {
+	margin-left: 20px;
+	float: left;
+	color: #333333;
+}
+
+.ineaclose {
+	margin-left: 20px;
+	float: left;
+}
+
+.inea-shure {
+	float: right;
+	margin-right: 20px;
+	color: #e8615e;
+}
+
+.sexshow-radiio {
+	width: 40%;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	display: inline-block;
+	text-align: center;
+	margin-top: 15%;
+	margin-bottom: 25%;
+	margin-bottom: 30%;
+}
+
+.sexshow-man {
+	display: block;
+	width: 40%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.sexshow-woman {
+	display: block;
+	width: 40%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.datainput {
+	text-align: center;
+}
+
+
+/*经济状况*/
+
+.elrp {
+	padding: 0;
+	margin: 0;
+	line-height: 20px;
+	margin-top: 14px;
+	float: left;
+}
+
+.elrpa {
+	width: 33%;
+	display: inline-table;
+	word-break: break-all;
+}
+
+.elremember {
+	margin-left: 4%;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #333333;
+}
+
+.suspenhand {
+	vertical-align: middle;
+}
+
+.viewa {
+	display: none;
+}
+
+.artreadio {
+	display: inline-block;
+	margin-left: 12px;
+	height: 276px;
+	overflow-y: auto;
+	width: 96%;
+}
+
+
+/*我的收入*/
+
+.meIncome {
+	background-color: #fff;
+	margin-top: 10px;
+}
+
+.meIncome .incomePtex {
+	padding-top: 10px;
+	margin: 0px;
+	text-indent: 15px;
+	font-family: "微软雅黑";
+}
+
+.meIncome .incomeImg {
+	vertical-align: middle;
+	margin-right: 3%;
+}
+
+.colorred {
+	color: #E8615E;
+}
+
+.meIncome .incomeTips {
+	text-indent: 50px;
+	color: #bbb;
+	font-family: "微软雅黑";
+}
+
+.icomebtn {
+	text-align: center;
+	border-top: 1px solid #f2f2f2;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.icomebtn .icomebtnImg {
+	width: 35%;
+}
+
+
+/*绑定银行卡*/
+
+.incomeBank {
+	height: 45px;
+	line-height: 35px;
+	font-size: 16px;
+}
+
+
+/*收支明细*/
+
+.revenue {
+	height: 40px;
+	line-height: 40px;
+	background-color: #e6e6e6;
+	text-indent: 15px;
+	font-family: "微软雅黑";
+	color: #848484;
+	margin-top: 10px;
+}
+
+.revenueArrow {
+	float: right;
+	margin: 0px;
+	height: 40px;
+}
+
+.revenueReturn {
+	background-color: #fff;
+	overflow: hidden;
+	margin-bottom: 2px;
+}
+
+.revenueReturn .revenuePtex {
+	display: inline-block;
+	margin: 10px;
+	line-height: 20px;
+}
+
+.revenueReturn .revenuePtex .revenueSpan {
+	display: block;
+}
+
+.revenueReturn .revenuePtex .revenueSone {
+	color: #848484;
+}
+
+.revenueReturn .revenuePtex .revenueStwo {
+	line-height: 30px;
+	font-size: 16px;
+}
+
+
+/*转账*/
+
+.tranferFist .icomeTransfer {
+	background-color: #FFFFFF;
+	height: 60px;
+	line-height: 60px;
+	text-indent: 15px;
+	margin-top: 10px;
+	font-family: "微软雅黑";
+}
+
+.icomeTransfer .transferSpan {
+	font-size: 16px;
+}
+
+.icomeTransfer .transferInput {
+	font-size: 16px;
+	height: 40px;
+	border: 0px;
+	padding-left: 10px;
+	width: 65%;
+	font-family: "微软雅黑";
+}
+
+.transferNext {
+	width: 100%;
+	text-align: center;
+}
+
+.tranferTip {
+	text-indent: 15px;
+	font-size: 14px;
+	color: #848484;
+	margin-bottom: 15%;
+	font-family: "微软雅黑";
+}
+
+
+/*确认转账*/
+
+.tranferName {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.tranferName p {
+	margin: 0;
+}
+
+.tranferSecond .icomeTransfer {
+	background-color: #FFFFFF;
+	text-indent: 15px;
+	margin-top: 10px;
+	font-family: "微软雅黑";
+}
+
+.tranferSecond .icomeTransfer .transferSpan {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+}
+
+.tranferSecond .icomeTransfer .transferSpth {
+	margin-left: 15px;
+	font-size: 25px;
+}
+
+.tranferSecond .icomeTransfer .transferInput {
+	font-size: 16px;
+	height: 40px;
+	padding-left: 10px;
+	width: 78%;
+	border: 0px;
+}
+
+.tranferSecond .icomeTransfer .transferPtex {
+	border-top: 1px solid #ccc;
+	margin: 0;
+}
+
+.tranferSecond .icomeTransfer .transferPinpuy {
+	width: 90%;
+	height: 30px;
+	border: 0px;
+	font-size: 14px;
+}
+
+
+/*月账单*/
+
+.billCalendar {
+	width: 50%;
+	margin-top: 15%;
+	margin-bottom: 15%;
+}
+
+.billReturn {
+	background-color: #fff;
+	overflow: hidden;
+	margin-bottom: 2px;
+}
+
+.billReturn .billp {
+	border-bottom: 1px solid #bbb;
+	margin: 0;
+	line-height: 35px;
+	text-align: center;
+	overflow: hidden;
+	font-family: "微软雅黑";
+}
+
+.billReturn .billp .billReward {
+	float: left;
+	padding-left: 15px;
+}
+
+.billReturn .billp .billnumber {
+	float: right;
+	padding-right: 1%;
+}
+
+
+/*修改登录密码*/
+
+.loginPassword .icomeTransfer {
+	background-color: #FFFFFF;
+	height: 60px;
+	line-height: 60px;
+	text-indent: 15px;
+	margin-top: 10px;
+	font-family: "微软雅黑";
+}
+
+
+/*修改支付密码*/
+
+.payword {
+	color: #848484;
+	margin: 0px;
+	line-height: 35px;
+	padding-left: 15px;
+	font-family: "微软雅黑";
+}
+
+.payRemember {
+	height: 50px;
+	background-color: #fff;
+	line-height: 50px;
+	margin-top: 10px;
+	padding-left: 15px;
+	font-family: "微软雅黑";
+}
+
+.viewModify {
+	display: none;
+}
+
+.viewReset {
+	display: none;
+}
+
+.viewReset .icomeTransfer {
+	background-color: #FFFFFF;
+	height: 60px;
+	line-height: 60px;
+	text-indent: 15px;
+	margin-top: 10px;
+	font-family: "微软雅黑";
+}
+
+.icomeTransfer .transferSpan {
+	font-size: 16px;
+}
+
+.viewReset .icomeTransfer .transferInput {
+	font-size: 16px;
+	height: 40px;
+	border: 0px;
+	padding-left: 10px;
+	width: 30%;
+	font-family: "微软雅黑";
+}
+
+.resetBtnone {
+	width: 35%;
+	height: 35px;
+	background-color: #fff;
+	border: 1px solid #e8615e;
+	border-radius: 5px;
+	color: #e8615e;
+	margin-left: 5%;
+	font-family: "微软雅黑";
+	text-align: center;
+	text-indent: 0px;
+}
+
+.upNext {
+	display: none;
+}
+
+
+/*我的我要发布*/
+
+.publiTextar {
+	width: 99%;
+	height: 350px;
+	text-indent: 15px;
+	font-size: 16px;
+	margin-top: 10px;
+	font-family: "微软雅黑";
+	border: 0px;
+	line-height: 30px;
+	resize: none;
+	word-break: break-all;
+}
+
+.publiAnon {
+	display: inline-block;
+}
+
+.publiAnonimg {
+	width: 15%;
+	vertical-align: sub;
+	margin-left: 15px;
+}
+
+.publiAnontext {
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+
+/*插件*/
+
+.footer-btn {
+	text-align: center;
+	padding-top: 13px;
+	width: 40%;
+	display: inline-block;
+	float: right;
+}
+
+.footer-btn .upload-img {
+	display: inline-block;
+	vertical-align: bottom;
+	width: 25px;
+	height: 21px;
+	margin-right: 10px;
+	background: url(../img/picture.png) no-repeat;
+	background-size: 100%;
+}
+
+.viewTime {
+	display: none;
+}
+
+.pubilnext {
+	color: #E8615E;
+	font-family: '微软雅黑';
+	font-size: 14px;
+}
+
+.transferIspan {
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #848484;
+	padding-left: 10px;
+}
+
+.viewtimeNext {
+	color: #E8615E;
+	font-family: '微软雅黑';
+	font-size: 14px;
+}
+
+
+/*接收人群*/
+
+.viewReceive {
+	display: none;
+}
+
+.teampopReceive {
+	width: 100%;
+	position: fixed;
+	top: 60%;
+	height: 300px;
+	z-index: 5002;
+	border: 1px solid #BBBBBB;
+	background-color: #FFFFFF;
+}
+
+.articReceive {
+	height: 170px;
+	overflow-y: auto;
+}
+
+.receiveclose {
+	margin-left: 20px;
+	float: left;
+}
+
+.artrReceive {
+	display: inline-block;
+	margin-left: 12px;
+	overflow-y: auto;
+	width: 96%;
+}
+
+.receive-hander {
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	height: 50px;
+	line-height: 50px;
+}
+
+.receive-shure {
+	float: right;
+	margin-right: 20px;
+	color: #e8615e;
+}
+
+.receNext {
+	color: #E8615E;
+	font-family: '微软雅黑';
+	font-size: 14px;
+}
+
+
+/*支付*/
+
+.viewPay {
+	display: none;
+}
+
+.icomeTransfer .payionc {
+	vertical-align: middle;
+	width: 7%;
+	margin-right: 10px;
+}
+
+.icomeTransfer .paySpan {
+	float: right;
+	margin-right: 10px;
+	margin-top: 8px;
+}
+
+.icomeTransfer .paySpan img {
+	width: 55%;
+}
+
+.icomeTransfer .payColor {
+	color: #E8615E;
+	margin-left: 10px;
+}
+
+
+/*关于我们*/
+
+.aboutUs {
+	text-align: center;
+}
+
+.aboutUs .wourText {
+	display: block;
+	font-size: 16px;
+	line-height: 25px;
+	font-family: "微软雅黑";
+}
+
+.aboutUs .ustop {
+	margin-top: 10%;
+}
+
+.usBefor:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: auto;
+	right: auto;
+	height: 1px;
+	width: 100%;
+	background-color: #c4c4c4;
+	display: none;
+	z-index: 15;
+	-webkit-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+}
+
+
+/*通用设置里的a颜色*/
+
+.Generalfont a {
+	color: #333333;
+}
+
+
+/*发布首页*/
+
+.publish {
+	overflow: hidden;
+}
+
+.publishTitlie {
+	line-height: 35px;
+	margin-left: 15px;
+	font-size: 15px;
+	display: block;
+	width: 70%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	float: left;
+}
+
+.publishTitlie img {
+	width: 5%;
+}
+
+.publishImg {
+	width: 18%;
+	float: right;
+	margin-top: 10px;
+	margin-right: 5px;
+}
+
+.publishPacct {
+	margin: 0;
+	text-indent: 15px;
+	padding-bottom: 10px;
+	color: #848484;
+}
+
+.publishPacct img {
+	vertical-align: sub;
+	width: 4%;
+}
+
+
+/*悬浮按钮*/
+
+i.icon.icon-plusa {
+	width: 24px;
+	height: 24px;
+	font-size: 0;
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20fill%3D'%23FFFFFF'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%20width%3D'24'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M19%2013h-6v6h-2v-6H5v-2h6V5h2v6h6v2z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E")
+}
+
+i.icon.icon-botton {
+	transform: translate3d(-50%, -50%, 0) rotate(90deg) scale(1);
+	-ms-transform: translate3d(-50%, -50%, 0) rotate(90deg) scale(1);
+	-webkit-transform: translate3d(-50%, -50%, 0) rotate(90deg) scale(1);
+	-o-transform: translate3d(-50%, -50%, 0) rotate(90deg) scale(1);
+	-moz-transform: translate3d(-50%, -50%, 0) rotate(90deg) scale(1);
+	transition-duration: .5s;
+}
+
+.speed-button {
+	display: none;
+	position: absolute;
+	width: 280px;
+	left: -107px;
+	top: -132px;
+	margin-left: -20px;
+	bottom: 100%;
+	margin-bottom: 16px;
+}
+
+.speedbtn img {
+	width: 60%;
+}
+
+
+/*发布详情*/
+
+.infortitle {
+	background-color: #FFFFFF;
+	clear: both;
+	margin-top: 10px;
+	overflow: hidden;
+	margin-bottom: 20px;
+	font-family: '微软雅黑';
+}
+
+.publishDetail {
+	overflow: hidden;
+	padding-bottom: 20px;
+	/*background-color: #fff;*/
+}
+
+.publishDetail .publishPacct img {
+	width: 10%;
+	vertical-align: sub;
+}
+
+.detailActive {
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #333333;
+	line-height: 25px;
+	text-indent: 15px;
+	padding-bottom: 20px;
+}
+
+.detailActive p {
+	margin: 0 auto;
+	text-align: justify;
+	text-indent: 35px;
+	width: 92%;
+	word-break: break-all;
+}
+
+.detailActive .activeImg {
+	text-indent: 0px;
+	text-align: center;
+}
+
+.detailActive .activeImg img {
+	width: 100%;
+	text-indent: 0px;
+}
+
+.detailBtn {
+	text-align: center;
+	overflow: hidden;
+	font-family: "微软雅黑";
+	position: relative;
+}
+
+.detailBtn img {
+	width: 45%;
+}
+
+
+/*信息首页*/
+
+.informaHome .publishDetail .detailImg {
+	width: 7%;
+}
+
+.informahomeUl {
+	text-align: center;
+	background-color: #fff;
+	font-family: "微软雅黑";
+}
+
+.informahomeUl li {
+	width: 35%;
+	display: inline-block;
+	height: 45px;
+	line-height: 45px;
+	font-size: 16px;
+}
+
+.informahomeUl .inmaSelect {
+	color: #e8615e;
+	border-bottom: 2px solid #e8615e;
+}
+
+.informaHome .publishDetail .detailActive {
+	color: #848484;
+	padding-bottom: 0px;
+}
+
+.informaHome .publishDetail .informaImg {
+	text-align: center;
+}
+
+.informaHome .publishDetail .informaImg img {
+	height: 100px;
+	width: 43%;
+}
+
+.readinfor {
+	display: none;
+}
+
+
+/*信息详情*/
+
+.detailTitlie {
+	line-height: 35px;
+	font-size: 15px;
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-family: "微软雅黑";
+}
+
+.detaiInput {
+	width: 75%;
+	border: 1px solid #848484;
+	border-radius: 5px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	color: #848484;
+	font-size: 16px;
+	padding-right: 55px;
+	font-family: "微软雅黑";
+	margin-top: 20px;
+}
+
+.detaiImg {
+	position: absolute;
+	right: 22px;
+	top: 25px;
+}
+
+
+/*信息回复*/
+
+.inforreply {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.inforreply .inforreplyImg {
+	display: inline-block;
+	width: 25%;
+	margin-left: 15px;
+	border-radius: 5px;
+	height: 80px;
+	vertical-align: top;
+}
+
+.inforreplyTex {
+	display: inline-block;
+	width: 66%;
+	margin-left: 5px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+}
+
+.inforreplyTex .inforreplyName {
+	color: #e8615e;
+	margin: 0px;
+}
+
+.inforreplyTex .inforreplyActive {
+	text-indent: 30px;
+	margin: 0px;
+}
+
+.inforActive {
+	margin: 0px;
+	margin-top: 10px;
+}
+
+.inforreplyBa {
+	border-top: 1px solid #ddd;
+}
+
+
+/*系统通知*/
+
+.notification {
+	background-color: #fff;
+	margin-top: 10px;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+
+.notificaImg {
+	display: inline-block;
+	width: 20%;
+	margin: 2%;
+	vertical-align: top;
+}
+
+.notificaright {
+	display: inline-block;
+	width: 70%;
+}
+
+.notificaright .notificareply {
+	font-size: 16px;
+	display: block;
+	margin-top: 15px;
+}
+
+.notificaright .notificatime {
+	float: right;
+	margin-top: 0px;
+	font-size: 14px;
+}
+
+.notificactice {
+	margin: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #848484;
+	margin-top: 5px;
+}
+
+
+/*领取奖励弹窗*/
+
+.teamgB {
+	width: 64%;
+	position: fixed;
+	top: 60%;
+	left: 50%;
+	margin: -330px 0 0 -120px;
+	border-radius: 29px 29px 0px 0px;
+	z-index: 5002;
+	border: 1px solid #BBBBBB;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+}
+
+.lanimgzB {
+	padding: 20px;
+}
+
+.lanimgzB img {
+	width: 100%;
+}
+
+.bothB {
+	border-bottom: 1px solid #BFBFBF;
+	width: 100%;
+	height: 1px;
+}
+
+.ceiveBao {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #848484;
+	margin-bottom: 20px;
+}
+
+.receiB {
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #E8615E;
+	font-weight: 600;
+}
+
+.receiBao {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #333333;
+}
+
+.receiBao .recspanB {
+	color: #E8615E;
+}
+
+.detailCount {
+	display: none;
+	position: absolute;
+	top: -6px;
+	left: 134px;
+}
+
+
+/*注册资料填写*/
+
+.hanTitle {
+	margin-left: 15%;
+}
+
+
+/*打开app提示*/
+
+.appPrompted {
+	width: 100%;
+	position: absolute;
+	z-index: 9999;
+}
+
+.appPrompted .promptLeft {
+	color: #fff;
+	width: 70%;
+	float: left;
+	height: 50px;
+	background: rgba(71, 71, 71, 0.7);
+}
+
+.appPrompted .promptRight {
+	background: rgba(232, 97, 94, 1);
+	width: 30%;
+	float: right;
+	line-height: 50px;
+	text-align: center;
+	font-family: "微软雅黑";
+	color: #FFFFFF;
+	height: 50px;
+}
+
+.appPrompted .promptptxt {
+	float: left;
+	margin: 0;
+	margin-top: 1%;
+	margin-left: 5%;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+
+
+/*跳过*/
+
+.rop {
+	float: right;
+	width: 13%;
+	margin-top: -14%;
+}
+/*忘记密码*/
+.forgotPassb{
+	display: none;
+}
+.forgotPassb .icomeTransfer {
+	background-color: #FFFFFF;
+	height: 60px;
+	line-height: 60px;
+	text-indent: 15px;
+	margin-top: 10px;
+	font-family: "微软雅黑";
+}
+.forgotPassb .icomeTransfer .transferInput {
+	font-size: 16px;
+	height: 40px;
+	border: 0px;
+	padding-left: 10px;
+	width: 30%;
+	font-family: "微软雅黑";
+}
+.icomeTransfer .transferSpan {
+	font-size: 16px;
+}
+
+.icomeTransfer .transferInput {
+	font-size: 16px;
+	height: 40px;
+	border: 0px;
+	padding-left: 10px;
+	width: 65%;
+	font-family: "微软雅黑";
+}
+
+.transferNext {
+	width: 100%;
+	text-align: center;
+}
+
+.tranferTip {
+	text-indent: 15px;
+	font-size: 14px;
+	color: #848484;
+	margin-bottom: 15%;
+	font-family: "微软雅黑";
+}

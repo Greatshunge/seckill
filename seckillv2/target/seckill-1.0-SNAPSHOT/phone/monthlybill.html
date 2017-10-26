@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- meta标签设置-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,
+     maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+			<meta name="apple-mobile-web-app-capable" content="yes">
+			<meta name="apple-mobile-web-app-status-bar-style" content="black">
+			<!-- app标题 -->
+			<title></title>
+			<!-- 使用iOS CSS主题样式-->
+			<link rel="stylesheet" href="dist/css/framework7.ios.min.css">
+			<!-- iOS related颜色样式 -->
+			<link rel="stylesheet" href="dist/css/framework7.ios.colors.min.css">
+			<!-- 自定义样式-->
+			<link rel="stylesheet" href="dist/css/my-app.css">
+			<link rel="stylesheet" type="text/css" href="css/moblie.css" />
+			<!--日期选择-->
+			<link rel="stylesheet" type="text/css" href="css/iosSelect.css" />
+	</head>
+
+	<body>
+		<!-- 所有的Views视图 -->
+		<div class="views">
+			<!-- 主视图（需要有"view-main"样式） -->
+			<div class="view view-main">
+				<!-- 顶部导航栏 -->
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="left">
+							<a href="paymentslist.html" class="back link"><i class="icon icon-back"></i></a>
+						</div>
+						<!-- 标题元素（为了让页面切换时标题文字有滑动效果，添加sliding样式） -->
+						<div class="center navbar-title sliding">月账单</div>
+						<div class="right" style="margin-right: 5px;"></div>
+					</div>
+				</div>
+				<!-- 页面容器（Pages container）由于我们使用了固定位置的navbar和toolbar，
+	              所以这里添加额外样式（navbar-through和toolbar-through）-->
+				<div class="pages navbar-through toolbar-through">
+					<!-- 首页, "data-page" 里设置页面名字 -->
+					<div data-page="index" class="page">
+						<!-- 支持滚动的页面内容 -->
+						<div class="page-content">
+							<div class="revenue">
+								<span>2017年2月</span>
+								<p class="revenueArrow">
+									<span style="float: right;">
+										<img src="img/month@2x.png" class="billCalendar" id="showGeneral"/>
+									</span>
+								</p>
+							</div>
+							<div class="billReturn">
+								<p class="billp">
+									<span class="billReward">浏览奖励</span>
+									<span>￥ 999999.99</span>
+									<span class="billnumber">（共计9999次）</span>
+								</p>
+								<p class="billp">
+									<span class="billReward">浏览奖励</span>
+									<span>￥ 0.99</span>
+									<span class="billnumber">（共计0次）</span>
+								</p>
+								<p class="billp">
+									<span class="billReward">浏览奖励</span>
+									<span>￥ 0.99</span>
+									<span class="billnumber">（共计0次）</span>
+								</p><p class="billp">
+									<span class="billReward">浏览奖励</span>
+									<span>￥ 0.99</span>
+									<span class="billnumber">（共计0次）</span>
+								</p><p class="billp">
+									<span class="billReward">浏览奖励</span>
+									<span>￥ 0.99</span>
+									<span class="billnumber">（共计0次）</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Framework7框架的js-->
+		<script type="text/javascript" src="dist/js/framework7.min.js"></script>
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 你的应用的js -->
+		<!--选择日期-->
+		<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/iosSelect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/moblie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bill.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/total-data.js" type="text/javascript" charset="utf-8"></script>
+			<!--去掉手机浏览器上边导航-->
+			<script src="js/browser.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

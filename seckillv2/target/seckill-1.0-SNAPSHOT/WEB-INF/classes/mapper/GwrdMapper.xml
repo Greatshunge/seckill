@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.seckill.dao.GwtdDao">
+    <!--目的：为DAO接口方法提供sql语句配置-->
+    <select id="queryByProduct" resultType="GwtdProduct">
+        select
+          prod_id,prod_name,prod_desc
+        from gwtd_product
+    </select>
+
+    <select id="queryByIdWithProject" parameterType="long" resultType="GwtdProject">
+        select
+          proj_id,prod_id,proj_name,proj_desc
+        from gwtd_project gpro
+        where gpro.prod_id = #{prodId}
+    </select>
+
+    <select id="queryByIdWithServer" parameterType="long" resultType="org.seckill.info.SerAndVerInfo">
+        select
+          gser.serv_id,gser.proj_id,gser.serv_name,gser.serv_ip,gser.serv_ver_port,gser.serv_ver_utime,gser.serv_desc,gser.serv_ctime,
+          gver.ver_id,gver.ver_name,gver.ver_url
+        from gwtd_server gser LEFT JOIN gwtd_version gver on gser.ver_id = gver.ver_id
+        where gser.proj_id = #{projId}
+        ORDER by serv_ctime
+    </select>
+
+    <select id="queryByIdWithVersion" parameterType="long" resultType="GwtdVersion">
+         select
+          ver_id,proj_id,ver_name,ver_url,ver_desc,ver_ctime
+        from gwtd_version gver
+        where gver.ver_id = #{projId}
+        ORDER by ver_ctime
+    </select>
+
+    <!--新增服务-->
+    <insert id="insertServer" parameterType="GwtdServer">
+        insert into
+          gwtd_server(proj_id,serv_name,serv_ip,serv_ver_port,ver_id,serv_desc)
+        VALUES (#{projId},#{servName},#{servIp},#{servVerPort},#{verId},#{servDesc})
+    </insert>
+
+    <!--新增产品-->
+    <insert id="insertProduct" parameterType="GwtdProduct">
+        insert into
+        gwtd_product(prod_name,prod_desc)
+        VALUES (#{prodName},#{prodDesc})
+    </insert>
+
+    <!--新增项目-->
+    <insert id="insertProject" parameterType="GwtdProject">
+        insert into
+        gwtd_project(prod_id,proj_name,proj_desc)
+        VALUES (#{prodId},#{projName},#{projDesc})
+    </insert>
+
+    <!--新增版本-->
+    <insert id="insertVersion" parameterType="GwtdVersion">
+        insert into
+        gwtd_project(proj_id,ver_name,ver_url)
+        VALUES (#{projId},#{verName},#{verUrl})
+    </insert>
+
+
+</mapper>

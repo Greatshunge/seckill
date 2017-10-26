@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- meta标签设置-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,
+     maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- app标题 -->
+		<title>fabu</title>
+		<!-- 使用iOS CSS主题样式-->
+		<link rel="stylesheet" href="dist/css/framework7.ios.min.css">
+		<!-- iOS related颜色样式 -->
+		<link rel="stylesheet" href="dist/css/framework7.ios.colors.min.css">
+		<!-- 自定义样式-->
+		<link rel="stylesheet" href="dist/css/my-app.css">
+		<link rel="stylesheet" type="text/css" href="css/moblie.css" />
+
+	</head>
+	<body>
+		<div class="appPrompted">
+			<div class="promptLeft">
+				<div style="float: left;width: 30%;">
+					<img src="img/close.png" class="proclose" style="width: 18px;vertical-align: top; margin-top: 17px;margin-left: 10%;" />
+					<img src="img/icon.png" style="width: 33px;margin: 7px 0px 0px 7%;" />
+				</div>
+				<p class="promptptxt">打开花源APP赚取福利</p>
+				<p class="promptptxt">更多福利等你来取！</p>
+			</div>
+			<a href="javascript:;">
+				<div class="promptRight">
+					立即打开
+				</div>
+			</a>
+		</div>
+		<!-- 所有的Views视图 -->
+		<div class="views ">
+			<div id="homeView" class="view view-main tab active" data-page="homeView">
+				<!-- 主视图（需要有"view-main"样式） -->
+				<div class="view view-main">
+					<!-- 顶部导航栏 -->
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="left"></div>
+							<div class="center navbar-title sliding">发布</div>
+							<div class="right" style="margin-right: 5px;"></div>
+						</div>
+					</div>
+					<!-- 页面容器（Pages container）由于我们使用了固定位置的navbar和toolbar，
+              所以这里添加额外样式（navbar-through和toolbar-through）-->
+					<div class="pages navbar-through toolbar-through">
+						<!-- 首页, "data-page" 里设置页面名字 -->
+						<div data-page="index" class="page">
+							<div class="speed-dial">
+								<a href="javascript:;" class="floating-button">
+									<i class="icon icon-plusa"></i>
+								</a>
+								<div class="speed-button">
+									<div class="speedbtn">
+										<a href="perwealth.html"> <img src="img/btn-share.png" /></a>
+									</div>
+									<div class="speedbtn">
+										<a href="javascript:;" class="speedbtnProm prompBao"><img src="img/customservice@2x.png" /></a>
+									</div>
+									<div class="speedbtn">
+										<a href="mypublish.html"><img src="img/edit@2x.png" /></a>
+									</div>
+								</div>
+							</div>
+							<!-- 支持滚动的页面内容  -->
+							<div class="page-content">
+								<a href="发布详细(未完成).html">
+									<div class="meAll">
+										<div class="publish">
+											<span class="publishTitlie">标题</span>
+											<span>
+											<img src="img/draft@2x.png" class="publishImg"/>
+										</span>
+										</div>
+
+										<p class="publishPacct">
+											<img src="img/time@2x.png" />
+											<span>2017.03.18 14:22</span> 创建
+										</p>
+									</div>
+								</a>
+								<a href="发布详细(已取消).html">
+									<div class="meAll">
+										<div class="publish">
+											<span class="publishTitlie">标题手机看电视卡机的卡机的空间撒谎的看撒谎都看见哈萨克接电话安静的哈市萨达哈萨克大家哈师大</span>
+											<span>
+											<img src="img/cancel@2x.png" class="publishImg"/>
+										</span>
+										</div>
+										<p class="publishPacct">
+											<img src="img/time@2x.png" />
+											<span>2017.03.18 14:22</span> 创建
+										</p>
+									</div>
+								</a>
+								<a href="发布详细(已完成).html">
+									<div class="meAll">
+										<div class="publish">
+											<span class="publishTitlie"><img src="img/redpackage@2x.png"/> 团队红包</span>
+											<span>
+											<img src="img/passdue@2x.png" class="publishImg"/>
+										</span>
+										</div>
+										<p class="publishPacct">
+											<img src="img/time@2x.png" />
+											<span>2017.03.18 14:22</span> 创建
+										</p>
+									</div>
+								</a>
+								<a href="发布详细(未通过).html">
+									<div class="meAll">
+										<div class="publish">
+											<span class="publishTitlie">标题手机看电视卡机的卡机的空间撒谎的看撒谎都看见哈萨克接电话安静的哈市萨达哈萨克大家哈师大</span>
+											<span>
+											<img src="img/nopass@2x.png" class="publishImg"/>
+										</span>
+										</div>
+										<p class="publishPacct">
+											<img src="img/time@2x.png" />
+											<span>2017.03.18 14:22</span> 创建
+										</p>
+									</div>
+								</a>
+								<a href="javascript:;">
+									<div class="meAll">
+										<div class="publish">
+											<span class="publishTitlie">标题手机看电视卡机的卡机的空间撒谎的看撒谎都看见哈萨克接电话安静的哈市萨达哈萨克大家哈师大</span>
+											<span>
+											<img src="img/cancel@2x.png" class="publishImg"/>
+										</span>
+										</div>
+										<p class="publishPacct">
+											<img src="img/time@2x.png" />
+											<span>2017.03.18 14:22</span> 创建
+										</p>
+									</div>
+								</a>
+								<a href="javascript:;">
+									<div class="meAll">
+										<div class="publish">
+											<span class="publishTitlie">标题手机看电视卡机的卡机的空间撒谎的看撒谎都看见哈萨克接电话安静的哈市萨达哈萨克大家哈师大</span>
+											<span>
+											<img src="img/cancel@2x.png" class="publishImg"/>
+										</span>
+										</div>
+										<p class="publishPacct">
+											<img src="img/time@2x.png" />
+											<span>2017.03.18 14:22</span> 创建
+										</p>
+									</div>
+								</a>
+								<a href="javascript:;">
+									<div class="meAll">
+										<div class="publish">
+											<span class="publishTitlie">标题手机看电视卡机的卡机的空间撒谎的看撒谎都看见哈萨克接电话安静的哈市萨达哈萨克大家哈师大</span>
+											<span>
+											<img src="img/cancel@2x.png" class="publishImg"/>
+										</span>
+										</div>
+										<p class="publishPacct">
+											<img src="img/time@2x.png" />
+											<span>2017.03.18 14:22</span> 创建
+										</p>
+									</div>
+								</a>
+								<a href="#">
+									<div class="meAll">
+										<div class="publish">
+											<span class="publishTitlie">标题手机看电视卡机的卡机的空间撒谎的看撒谎都看见哈萨克接电话安静的哈市萨达哈萨克大家哈师大</span>
+											<span>
+											<img src="img/cancel@2x.png" class="publishImg"/>
+										</span>
+										</div>
+										<p class="publishPacct">
+											<img src="img/time@2x.png" />
+											<span>2017.03.18 14:22</span> 创建
+										</p>
+									</div>
+								</a>
+								<a href="#">
+									<div class="meAll">
+										<div class="publish">
+											<span class="publishTitlie">标题手机看电视卡机的卡机的空间撒谎的看撒谎都看见哈萨克接电话安静的哈市萨达哈萨克大家哈师大</span>
+											<span>
+											<img src="img/cancel@2x.png" class="publishImg"/>
+										</span>
+										</div>
+										<p class="publishPacct">
+											<img src="img/time@2x.png" />
+											<span>2017.03.18 14:22</span> 创建
+										</p>
+									</div>
+								</a>
+								<a href="#">
+									<div class="meAll">
+										<div class="publish">
+											<span class="publishTitlie">标题手机看电视卡机的卡机的空间撒谎的看撒谎都看见哈萨克接电话安静的哈市萨达哈萨克大家哈师大</span>
+											<span>
+											<img src="img/cancel@2x.png" class="publishImg"/>
+										</span>
+										</div>
+										<p class="publishPacct">
+											<img src="img/time@2x.png" />
+											<span>2017.03.18 14:22</span> 创建
+										</p>
+									</div>
+								</a>
+								<a href="#">
+									<div class="meAll">
+										<div class="publish">
+											<span class="publishTitlie">标题手机看电视卡机的卡机的空间撒谎的看撒谎都看见哈萨克接电话安静的哈市萨达哈萨克大家哈师大</span>
+											<span>
+											<img src="img/cancel@2x.png" class="publishImg"/>
+										</span>
+										</div>
+										<p class="publishPacct">
+											<img src="img/time@2x.png" />
+											<span>2017.03.18 14:22</span> 创建
+										</p>
+									</div>
+								</a>
+								<a href="#">
+									<div class="meAll">
+										<div class="publish">
+											<span class="publishTitlie">标题手机看电视卡机的卡机的空间撒谎的看撒谎都看见哈萨克接电话安静的哈市萨达哈萨克大家哈师大</span>
+											<span>
+											<img src="img/cancel@2x.png" class="publishImg"/>
+										</span>
+										</div>
+										<p class="publishPacct">
+											<img src="img/time@2x.png" />
+											<span>2017.03.18 14:22</span> 创建1
+										</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- toolbar start -->
+			<div class="toolbar tabbar tabbar-labels">
+				<div class="toolbar-inner">
+					<a href="meindex.html" class="tab-link tab-linkc">
+						<i class="icon iconM "></i>
+						<span class="tabbar-label iconn ">我的</span>
+					</a>
+
+					<a href="index.html" class="tab-link tab-linka">
+						<i class="icon iconX"></i>
+						<span class="tabbar-label iconn">信息</span>
+					</a>
+					<a href="index_publish.html" class="tab-link tab-linkb">
+						<i class="icon iconF iconFa"></i>
+						<span class="tabbar-label iconn iconnc">发布</span>
+					</a>
+					
+				</div>
+			</div>
+		</div>
+		<!-- Framework7框架的js-->
+		<script type="text/javascript" src="dist/js/framework7.min.js"></script>
+		<!--<script src="dist/js/my-app.js" type="text/javascript" charset="utf-8"></script>-->
+		<!-- 你的应用的js -->
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/moblie.js" type="text/javascript" charset="utf-8"></script>
+		<!--去掉手机浏览器上边导航-->
+		<script src="js/browser.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			$('.prompBao').click(function(){
+				confirm("400-6126-653");
+			})
+			
+		</script>
+	</body>
+
+</html>

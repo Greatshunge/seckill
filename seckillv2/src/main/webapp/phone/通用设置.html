@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- meta标签设置-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,
+     maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- app标题 -->
+		<title></title>
+		<!-- 使用iOS CSS主题样式-->
+		<link rel="stylesheet" href="dist/css/framework7.ios.min.css">
+		<!-- iOS related颜色样式 -->
+		<link rel="stylesheet" href="dist/css/framework7.ios.colors.min.css">
+		<!-- 自定义样式-->
+		<link rel="stylesheet" href="dist/css/my-app.css">
+		<link rel="stylesheet" type="text/css" href="css/moblie.css" />
+
+	</head>
+
+	<body>
+		<!-- 所有的Views视图 -->
+		<div class="views">
+			<!-- 主视图（需要有"view-main"样式） -->
+			<div class="view">
+				<!-- 顶部导航栏 -->
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="left">
+							<a href="meindex.html" class="back link"><i class="icon icon-back"></i></a>
+						</div>
+						<!-- 标题元素（为了让页面切换时标题文字有滑动效果，添加sliding样式） -->
+						<div class="center navbar-title sliding">通用设置</div>
+						<div class="right" style="margin-right: 5px;"></div>
+					</div>
+				</div>
+				<!-- 页面容器（Pages container）由于我们使用了固定位置的navbar和toolbar，
+	              所以这里添加额外样式（navbar-through和toolbar-through）-->
+				<div class="pages navbar-through toolbar-through">
+					<!-- 首页, "data-page" 里设置页面名字 -->
+					<div data-page="index" class="page">
+						<!-- 支持滚动的页面内容 -->
+						<div class="page-content Generalfont">
+							<a href="contactUs.html">
+								<div class="payRemember payClickmber">
+									关于我们
+									<p class="revenueArrow"><img src="img/go-small.png" style="width:30%;margin-top: 70%;" /></p>
+								</div>
+							</a>
+							<div class="payRemember payClickmber prompBao">
+								联系电话
+								<p class="revenueArrow"><img src="img/go-small.png" style="width:30%;margin-top: 70%;" /></p>
+							</div>
+							<a href="花开常见问题/常见问题.html">
+								<div class="payRemember payClickmber">
+									常见问题
+									<p class="revenueArrow"><img src="img/go-small.png" style="width:30%;margin-top: 70%;" /></p>
+								</div>
+							</a>
+							<a href="花源项目说明/index.html">
+								<div class="payRemember payClickmber">
+									项目说明
+									<p class="revenueArrow"><img src="img/go-small.png" style="width:30%;margin-top: 70%;" /></p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Framework7框架的js-->
+		<script type="text/javascript" src="dist/js/framework7.min.js"></script>
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 你的应用的js -->
+		<script src="js/moblie.js" type="text/javascript" charset="utf-8"></script>
+		<!--去掉手机浏览器上边导航-->
+		<script src="js/browser.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('.prompBao').click(function(){
+				confirm("400-6126-653");
+			})
+			$('.purgeCac').click(function(){
+				confirm("确定清除缓存么？");
+			})
+		</script>
+	</body>
+
+</html>

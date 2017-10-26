@@ -1,0 +1,404 @@
+body {
+    font-size: 12px;
+    color: #333333;
+    line-height: 1.428571429;
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Microsoft YaHei";
+}
+
+#header{
+    position: relative;
+    z-index: 100;
+    clear: both;
+    height: 65px;
+    background: #373d41;
+    font-size: 12px;
+    min-width: 990px;
+}
+
+#versionPub{
+    color: #fff;
+    font-size: 16px;
+    line-height: 64px;
+    margin-right: 1px;
+    background: #373d41;
+    width: 129px;
+    text-align: center;
+}
+
+.content{
+    position: absolute;
+    width: 100%;
+    top: 75px;
+    bottom: 0px;
+    background-color: #000;
+    z-index: 100;
+}
+
+.left_con{
+    position: fixed;
+    top: 75px;
+    bottom: 0px;
+    background-color: #293038;
+    z-index: 102;
+    overflow-x: hidden;
+}
+
+.left_con_v1{
+    width: 180px;
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.sidebar-inner{
+    position: relative;
+    text-align: center  ;
+}
+
+.sidebar_fold{
+    height: 30px;
+    width: 100%;
+    background: #4A5064;
+    color: #aeb9c2;
+    text-align: center;
+    line-height: 30px !important;
+    font-size: 12px;
+    user-select: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+}
+
+.sidebar_title{
+    height: 40px;
+    background: #42485B;
+    color: #fff;
+    line-height: 40px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.sidebar_title_icon{
+    display: inline-block;
+    margin: 0 20px 0 20px;
+    vertical-align: middle;
+}
+
+.sidebar_span{
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.02em;
+    font-size: 16px;
+    font-family: 微软雅黑;
+}
+
+.sidebar_trans{
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.nav_item{
+    position: relative;
+}
+
+.sidebar_trans li a{
+    display: block;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+}
+
+.nav_icon{
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    float: left;
+    color: #aeb9c2;
+}
+
+.icon_ecs{
+    width: 170px;
+    text-align: center;
+    font-size: 16px;
+    float: left;
+    color: #aeb9c2;
+    font-family: cursive;
+}
+
+.right_con{
+    left: 180px;
+    background: #FFFFFF;
+    width: auto;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.view_product{
+    position: absolute;
+    width: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.view_container{
+    padding: 0 0 16px 0;
+    margin-right: -15px;
+    margin-left: 15px;
+    height: 100%;
+}
+
+.view_col{
+    width: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    height: 100%;
+}
+
+.view_con{
+    position: relative;
+    min-height: 800px;
+}
+
+.view_main{
+    margin-right: 227px;
+    padding-right: 17px;
+}
+
+.view_info{
+    padding: 16px 0px;
+    min-height: 70px;
+}
+
+.view_detail{
+    background: #f9f9f9;
+    text-align: center;
+    border: 1px solid #dddddd;
+    height: 60px;
+}
+
+.view_detail_col{
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #6f7376;
+    letter-spacing: 0;
+    width: 25%;
+    float: left;
+}
+
+.view_detail_col_info1{
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #6f7376;
+    letter-spacing: 0;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.view_detail_col_info2{
+    padding-left: 10px;
+    letter-spacing: 0;
+    text-decoration: none;
+    font-size: 30px;
+    color: #12aeef;
+}
+
+.ser_fix{
+    padding: 16px 0px;
+    min-height: 70px;
+}
+
+.ser_row{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.ser_col {
+    width: 50%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.ser_box{
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+}
+
+.ser_box_title{
+    background: #f9f9f9;
+    height: 36px;
+    line-height: 36px;
+}
+
+.ser_box_title_pull{
+    float: left;
+}
+
+.ser_box_title_name{
+    padding: 0 8px;
+}
+
+.ser_box_content{
+    padding: 0 10px;
+    margin: 21px 0;
+}
+
+.ser_content_summary{
+    height: 80px;
+    width: 100%;
+    text-align: left;
+    float: left;
+}
+
+.ser_content_summary .item{
+    display: block;
+    padding: 0 18px;
+}
+
+.ser_content_summary a{
+    text-decoration: none;
+    color: #333333;
+    cursor: pointer;
+    background: transparent;
+    text-align: left;
+}
+
+.ser_junior{
+    padding-right: 18px;
+    font-family: PingFangSC-Light monospace;
+}
+
+.ser_senior{
+    line-height: 50px;
+    font-size: 30px;
+    color: #09C
+}
+
+.ser_content_line{
+    float: left;
+    width: 4px;
+    height: 110px;
+    border: 1px solid #f0f0f5;
+}
+
+.ser_content_detail{
+    width: 100%;
+    min-width: 125px;
+    float: left;
+    height: 110px;
+}
+
+.ser_content_item{
+    text-align: left;
+    margin-left: 23px;
+    line-height: 28px;
+}
+
+li{
+    display: list-item;
+}
+
+.ser_content_item ul{
+    display: block;
+    list-style-type: none;
+}
+
+.run_status{
+    color: #090;
+}
+
+.run_status_running i{
+    background-position: -61px -4px;
+}
+
+.run_status_recent i{
+    background-position: -61px -195px;
+}
+
+.run_status_expiredfailure i{
+    background-position: -61px -28px;
+}
+
+.ser_content_item i{
+
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    zoom: 1;
+    border-radius: 16px;
+    vertical-align: middle;
+    margin-top: -1px;
+    background-repeat: no-repeat;
+    background-image: url(/img/ecs-icons.png);
+}
+
+.ser_content_item li a{
+    text-decoration: none;
+    color: #333333;
+}
+
+.title{
+    padding: 0 7px;
+}
+
+.text_success{
+    color: #090;
+}
+
+.box_line{
+    border: 1px solid #f0f0f5;
+    height: 2px;
+    margin: 0 17px;
+}
+
+.box_footer{
+    line-height: 24px;
+    text-align: center;
+}
+
+.box_on{
+    background-color: #12aeef;
+}
+
+.suspenhand {
+    cursor: pointer;
+}
+
+.spanboxxaa {
+    padding: 8px 14px;
+    background: url(../img/yesa.png) no-repeat center;
+}
+
+.elrspanb {
+    background: url(../img/noa.png) no-repeat 2px 5px;
+}
+
+
+.add_project{
+    position: relative;
+    top: 33px;
+    left: -100px;
+}
+

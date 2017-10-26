@@ -1,0 +1,131 @@
+body,html,#container{
+    height: 100%;
+    margin: 0px;
+}
+.my-marker .amap-simple-marker-label {
+    color: #fff;
+}
+#panel {
+    position: fixed;
+    background-color: white;
+    max-height: 90%;
+    overflow-y: auto;
+    top: 10px;
+    right: 10px;
+    width: 280px;
+}
+
+/*筛选按钮*/
+.search_home_btn{
+    position: fixed;
+    right: -25px;
+    top: 20px;
+}
+/*筛选框*/
+.search_home{
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+/*扫描二维码*/
+.scanning_qrcode{
+    position: absolute;
+    left: 37%;
+    bottom: 5%;
+}
+.qr_code{
+    position: absolute;
+    top: 25%;
+    left: 10%;
+}
+
+/*返回地图*/
+.back_map{
+    position: absolute;
+    top: 9px;
+    left: 5%;
+}
+/*低电量*/
+.first_btn{
+    padding: 3% 3% 3% 9%; margin-left: 7%;
+}
+
+/*按钮背景图*/
+.background_img{
+    background-image: url('../nazheimg/btn1.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+/*全部车辆*/
+.second_btn{
+    padding: 3% 3% 3% 9%;
+    margin-left: 7%;
+    margin-top: 15%;
+}
+/*待检测车辆*/
+.third_btn{
+    padding: 3% 3% 3% 7%;
+    margin-left: 7%;
+    margin-top: 8%;
+}
+/*待回收车辆*/
+.fourth_btn{
+    padding: 3% 3% 3% 7%;
+    margin-left: 4%;
+    margin-top: 8%;
+}
+/*异常移动车辆*/
+.fifth_btn{
+    padding: 3% 3% 3% 6%;
+    margin-left: 7%;
+    margin-top: 8%;
+}
+
+/*滑动框*/
+#box_ {
+    position:relative;
+    width:200px;
+    height:50px;
+    border:1px solid transparent;
+    float:left;
+}
+#bg_ {
+    height:10px;
+    margin-top:11px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    overflow:hidden;
+}
+#bgcolor_ {
+    background:rgb(170,232,0);
+    width:6px;
+    height:10px;
+    border-radius:5px;
+}
+#bt_ {
+    width:30px;
+    height:30px;
+    background-image:url('../nazheimg/circle.png');
+    background-size: 100% 100%;
+    border-radius:17px;
+    overflow:hidden;
+    position:absolute;
+    left:6px;
+    margin-left:-12px;
+    /*border:1px solid #d0cbcb;*/
+    top:1px;
+    cursor:pointer;
+}
+#text_xa_ {
+    width:120px;
+    margin:0 auto;
+    font-size:14px;
+    padding-left:10px;
+    padding-top:2px;
+    line-height:2em;
+    float:left;
+}

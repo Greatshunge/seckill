@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- meta标签设置-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,
+     maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- app标题 -->
+		<title>hangge</title>
+		<!-- 使用iOS CSS主题样式-->
+		<link rel="stylesheet" href="dist/css/framework7.ios.min.css">
+		<!-- iOS related颜色样式 -->
+		<link rel="stylesheet" href="dist/css/framework7.ios.colors.min.css">
+		<!-- 自定义样式-->
+		<link rel="stylesheet" href="dist/css/my-app.css">
+		<link rel="stylesheet" type="text/css" href="css/moblie.css" />
+
+	</head>
+
+	<body>
+		<div class="appPrompted">
+			<div class="promptLeft">
+				<div style="float: left;width: 65px;">
+					<img src="img/close.png" class="proclose" style="width: 18px;vertical-align: top; margin-top: 17px;margin-left: 5px;" />
+					<img src="img/icon.png" style="width: 33px;margin: 7px 0px 0px 5px;" />
+				</div>
+				<p class="promptptxt">打开花源APP赚取福利</p>
+				<p class="promptptxt">更多福利等你来取！</p>
+			</div>
+			<a href="javascript:;">
+				<div class="promptRight">
+					立即打开
+				</div>
+			</a>
+			<div style="clear: both;"></div>
+		</div>
+		<!-- 所有的Views视图 -->
+		<div class="views">
+			<div id="homeView" class="view view-main tab active" data-page="homeView">
+				<!-- 主视图（需要有"view-main"样式） -->
+
+				<div class="view view-main">
+					<!-- 顶部导航栏 -->
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="left"></div>
+							<div class="center navbar-title sliding">我的</div>
+							<div class="right" style="margin-right: 5px;"></div>
+						</div>
+					</div>
+
+					<!-- 页面容器（Pages container）由于我们使用了固定位置的navbar和toolbar，
+              所以这里添加额外样式（navbar-through和toolbar-through）-->
+					<div class="pages navbar-through toolbar-through">
+						<!-- 首页, "data-page" 里设置页面名字 -->
+						<div data-page="index" class="page">
+							<!-- 支持滚动的页面内容  -->
+							<div class="page-content">
+								<a href="userinfo.html">
+									<div class="avatarAll">
+										<img src="img/round.png" class="avatarImg" />
+										<div class="avatarTex">
+											<p class="avatarTexname">鲍树阁</p>
+											<p class="avatarTextype">查看或遍布个人资料</p>
+										</div>
+										<p class="avatarNex">
+											<img src="img/go-small.png" style="width: 66%;" />
+										</p>
+										<div style="clear: both;"></div>
+									</div>
+								</a>
+								<a href="mypublish.html">
+									<div class="meAll">
+										<img src="img/my-publish.png" class="meBj" />
+										<div class="metex">
+											<p>我要发布</p>
+										</div>
+										<p class="meNex">
+											<img src="img/go-small.png" style="width: 66%;" />
+										</p>
+									</div>
+								</a>
+								<a href="perwealth.html">
+									<div class="meAll">
+										<img src="img/my-team.png" class="meBj" />
+										<div class="metex">
+											<p>我的财富团队</p>
+										</div>
+										<p class="meNex">
+											<img src="img/go-small.png" style="width: 66%;" />
+										</p>
+									</div>
+								</a>
+								<a href="myincome.html">
+									<div class="meAll">
+										<img src="img/my-account.png" class="meBj" />
+										<div class="metex">
+											<p>我的收入</p>
+										</div>
+										<p class="meNex">
+											<img src="img/go-small.png" style="width: 66%;" />
+										</p>
+									</div>
+								</a>
+								<a href="resetpassword.html">
+									<div class="meAll">
+										<img src="img/my-signpwd.png" class="meBj" />
+										<div class="metex">
+											<p>登录密码</p>
+										</div>
+										<p class="meNex">
+											<img src="img/go-small.png" style="width: 66%;" />
+										</p>
+									</div>
+								</a>
+								<a href="通用设置.html">
+									<div class="meAll">
+										<img src="img/my-set.png" class="meBj" />
+										<div class="metex">
+											<p>通用设置</p>
+										</div>
+										<p class="meNex">
+											<img src="img/go-small.png" style="width: 66%;" />
+										</p>
+									</div>
+								</a>
+								<a href="index.html">
+									<div class="meAll quitLogin">
+										<img src="img/my-exit.png" class="meBj" />
+										<div class="metex">
+											<p>退出登录</p>
+										</div>
+										<p class="meNex">
+											<img src="img/go-small.png" style="width: 66%;" />
+										</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- toolbar start -->
+			<div class="toolbar tabbar tabbar-labels">
+				<div class="toolbar-inner">
+					<a href="meindex.html" class="tab-link tab-linkc">
+						<i class="icon iconM iconMc"></i>
+						<span class="tabbar-label iconn iconnc">我的</span>
+					</a>
+
+					<a href="index.html" class="tab-link tab-linka">
+						<i class="icon iconX"></i>
+						<span class="tabbar-label iconn">信息</span>
+					</a>
+					<a href="index_publish.html" class="tab-link tab-linkb">
+						<i class="icon iconF"></i>
+						<span class="tabbar-label iconn">发布</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- Framework7框架的js-->
+		<script type="text/javascript" src="dist/js/framework7.min.js"></script>
+		<!-- 你的应用的js -->
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/moblie.js" type="text/javascript" charset="utf-8"></script>
+		<!--去掉手机浏览器上边导航-->
+		<script src="js/browser.js" type="text/javascript" charset="utf-8"></script>
+		<!--退出登录-->
+		<script type="text/javascript">
+			$('.quitLogin').click(function() {
+				var r = confirm("是否退出登录？");
+				if(r == ture) {
+
+				} else {
+
+				}
+			})
+		</script>
+	</body>
+
+</html>

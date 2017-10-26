@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- meta标签设置-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,
+     maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+			<meta name="apple-mobile-web-app-capable" content="yes">
+			<meta name="apple-mobile-web-app-status-bar-style" content="black">
+			<!-- app标题 -->
+			<title></title>
+			<!-- 使用iOS CSS主题样式-->
+			<link rel="stylesheet" href="dist/css/framework7.ios.min.css">
+			<!-- iOS related颜色样式 -->
+			<link rel="stylesheet" href="dist/css/framework7.ios.colors.min.css">
+			<!-- 自定义样式-->
+			<link rel="stylesheet" href="dist/css/my-app.css">
+			<link rel="stylesheet" type="text/css" href="css/moblie.css" />
+			<!--选择发布时间-->
+			<link rel="stylesheet" type="text/css" href="css/iosSelect.css" />
+
+	</head>
+
+	<body>
+		<!-- 所有的Views视图 -->
+		<div class="views">
+			<!-- 主视图（需要有"view-main"样式） -->
+			<div class="view viewpubli">
+				<!-- 顶部导航栏 -->
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="left">
+							<a href="meindex.html" class="back link"><i class="icon icon-back"></i></a>
+						</div>
+						<!-- 标题元素（为了让页面切换时标题文字有滑动效果，添加sliding样式） -->
+						<div class="center navbar-title sliding">撰写信息</div>
+						<div class="right" style="margin-right: 5px;">
+							<a href="javascript:;" class="pubilnext">下一步</a>
+						</div>
+					</div>
+				</div>
+				<div class="page navbar-fixed">
+					
+					<!-- 页面容器（Pages container）由于我们使用了固定位置的navbar和toolbar，
+	              所以这里添加额外样式（navbar-through和toolbar-through）-->
+					<div class="pages navbar-through toolbar-through">
+						<!-- 首页, "data-page" 里设置页面名字 -->
+						<div data-page="index" class="page">
+							<!-- 支持滚动的页面内容 -->
+							<div class="page-content loginPassword">
+								<div class="icomeTransfer" style="height: 50px;line-height: 50px;">
+									<span class="transferSpan">标题</span>
+									<input type="text" placeholder="请输入信息标题（20字以内）" class="transferInput" style="width: 80%;" />
+								</div>
+								<div>
+									<textarea class="publiTextar" placeholder="开始写信息...">内容：</textarea>
+									<p class="publiAnon">
+										<img src="img/publi-no@2x.png" class="publiAnonimg" />
+										<span class="publiAnontext">匿名发布</span>
+									</p>
+									<div class="footer-btn g-image-upload-box">
+										<div class="upload-button" >
+											<span class="upload" ><i class="upload-img"></i>插入图片</span>
+											<input class="input-file" id="imageUpload" type="file" name="fileInput" accept="image/*;capture=camera" style="position:absolute;left: 64%;opacity:0;width:30%;">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--选择发布时间-->
+			<div class="view viewTime">
+				<!-- 顶部导航栏 -->
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="left">
+							<a href="meindex.html" class="back link"><i class="icon icon-back"></i></a>
+						</div>
+						<!-- 标题元素（为了让页面切换时标题文字有滑动效果，添加sliding样式） -->
+						<div class="center navbar-title sliding">选择发布时间</div>
+						<div class="right" style="margin-right: 5px;">
+							<a href="javascript:;" class="viewtimeNext">下一步</a>
+						</div>
+					</div>
+				</div>
+				<!-- 页面容器（Pages container）由于我们使用了固定位置的navbar和toolbar，
+	              所以这里添加额外样式（navbar-through和toolbar-through）-->
+				<div class="pages navbar-through toolbar-through">
+					<!-- 首页, "data-page" 里设置页面名字 -->
+					<div data-page="index" class="page">
+						<!-- 支持滚动的页面内容 -->
+						<div class="page-content loginPassword">
+							<p class="payword">
+								注：审核时间为1个工作日，请您慎重选择发布时间
+							</p>
+							<div class="icomeTransfer" id="selectDate" style="height: 50px;line-height: 50px;">
+								<span class="transferSpan">选择发布时间</span>
+								<span class="transferIspan" data-year="" data-month="" data-date="" id="showDate">请选择信息发布时间</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--选择接收人群-->
+			<div class="view viewReceive">
+				<!-- 顶部导航栏 -->
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="left">
+							<a href="meindex.html" class="back link"><i class="icon icon-back"></i></a>
+						</div>
+						<!-- 标题元素（为了让页面切换时标题文字有滑动效果，添加sliding样式） -->
+						<div class="center navbar-title sliding">选择接收人群</div>
+						<div class="right" style="margin-right: 5px;">
+							<a href="javascript:;" class="receNext">下一步</a>
+						</div>
+					</div>
+				</div>
+				<!-- 页面容器（Pages container）由于我们使用了固定位置的navbar和toolbar，
+	              所以这里添加额外样式（navbar-through和toolbar-through）-->
+				<div class="pages navbar-through toolbar-through">
+					<!-- 首页, "data-page" 里设置页面名字 -->
+					<div data-page="index" class="page">
+						<!-- 支持滚动的页面内容 -->
+						<div class="page-content">
+							<div class="plyAll receive-sex">
+								<span class="plysTouB">性别</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-day">
+								<span class="plysTouB">年龄</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-quali">
+								<span class="plysTouB">学历</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-blood">
+								<span class="plysTouB">血型</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-const">
+								<span class="plysTouB">星座</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-nat">
+								<span class="plysTouB">民族</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-samsool">
+								<span class="plysTouB">小学就读学校</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-midsool">
+								<span class="plysTouB">初中就读学校</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-higsool">
+								<span class="plysTouB">高中就读学校</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-bigsool">
+								<span class="plysTouB">大学就读学校</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-city" id="select_contact">
+								<span class="plysTouB">出生地</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-live">
+								<span class="plysTouB">居住情况</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-marr">
+								<span class="plysTouB">婚姻状况</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-monthly ">
+								<span class="plysTouB">月薪</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-buye">
+								<span class="plysTouB">购车情况</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-econ">
+								<span class="plysTouB">经济状况</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-occupa">
+								<span class="plysTouB">职业</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-colleges">
+								<span class="plysTouB">所在院校</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-physical ">
+								<span class="plysTouB">喜爱的体育运动</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-food">
+								<span class="plysTouB">喜爱的食物</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-cream">
+								<span class="plysTouB">喜爱的电影</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-gig">
+								<span class="plysTouB">喜爱的节目</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-gLeisure">
+								<span class="plysTouB">休闲娱乐</span>
+								<span class="plysToutex">不限</span>
+							</div>
+							<div class="plyAll receive-hobby">
+								<span class="plysTouB">业余爱好</span>
+								<span class="plysToutex">不限</span>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--支付页面-->
+			<div class="view viewPay">
+				<!-- 顶部导航栏 -->
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="left">
+							<a href="meindex.html" class="back link"><i class="icon icon-back"></i></a>
+						</div>
+						<!-- 标题元素（为了让页面切换时标题文字有滑动效果，添加sliding样式） -->
+						<div class="center navbar-title sliding">支付</div>
+						<div class="right" style="margin-right: 5px;"></div>
+					</div>
+				</div>
+				<!-- 页面容器（Pages container）由于我们使用了固定位置的navbar和toolbar，
+	              所以这里添加额外样式（navbar-through和toolbar-through）-->
+				<div class="pages navbar-through toolbar-through">
+					<!-- 首页, "data-page" 里设置页面名字 -->
+					<div data-page="index" class="page">
+						<!-- 支持滚动的页面内容 -->
+						<div class="page-content tranferFist">
+							<div class="icomeTransfer">
+								<span class="transferSpan">合计价格</span>
+								<span class="payColor">￥288</span>
+							</div>
+							<p class="tranferTip" style="margin-bottom: 0px;">
+								<span>定价详情请联系客服咨询 400-6126-653</span>
+							</p>
+							<div class="icomeTransfer">
+								<img src="img/remainsumpay@2x.png" class="payionc" />
+								<span class="transferSpan">余额支付  （可用余额￥<span>300</span>）</span>
+								<span class="paySpan"><img src="img/check@2x.png"/></span>
+							</div>
+							<div class="icomeTransfer">
+								<img src="img/alipay@2x.png" class="payionc" />
+								<span class="transferSpan">支付宝支付</span>
+								<span class="paySpan"><img src="img/uncheck@2x.png"/></span>
+							</div>
+							<div class="icomeTransfer">
+								<img src="img/wechat@2x.png" class="payionc" />
+								<span class="transferSpan">微信支付</span>
+								<span class="paySpan"><img src="img/uncheck@2x.png"/></span>
+							</div>
+							<div class="icomeTransfer">
+								<img src="img/unionpay@2x.png" class="payionc" />
+								<span class="transferSpan">银联支付</span>
+								<span class="paySpan"><img src="img/uncheck@2x.png"/></span>
+							</div>
+							<p class="transferNext">
+								<img src="img/btn-submit@2x.png" style="width: 70%;margin-top: 10%;" />
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--各种弹框-->
+		<div class="overlayer teampopbz"></div>
+		<!--性别-->
+		<div class="teampop teampopReceive vishow sexshow">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>性别</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article class="articReceive">
+					<div class="artrReceive">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">男</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">女</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+
+		<!--年龄-->
+		<div class="teampop teampopReceive vishow day">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>性别</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article class="articReceive">
+					<div class="artrReceive">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">18岁以下</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">18-25</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">26-35</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">56岁以上</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--学历-->
+		<div class="teampop teampopReceive vishow qualifica">
+			<header class="receive-hander">
+				<span class="receiveclose">取消</span>
+				<span>学历</span>
+				<span class="receive-shure">确认</span>
+			</header>
+			<article class="articReceive">
+				<div class="artrReceive">
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">小学</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">中学</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">高中</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">大专</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">本科</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">研究生</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">博士</span>
+					</p>
+				</div>
+			</article>
+		</div>
+		<!--血型-->
+		<div class="teampop teampopReceive vishow mebool">
+			<header class="receive-hander">
+				<span class="receiveclose">取消</span>
+				<span>血型</span>
+				<span class="receive-shure">确认</span>
+			</header>
+			<article class="articReceive">
+				<div class="artrReceive">
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">A</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">B</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">O</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">AB</span>
+					</p>
+				</div>
+			</article>
+
+		</div>
+		<!--星座-->
+		<div class="teampop teampopReceive vishow meconst">
+			<header class="receive-hander">
+				<span class="receiveclose">取消</span>
+				<span>星座</span>
+				<span class="receive-shure">确认</span>
+			</header>
+			<article class="articReceive">
+				<div class="artrReceive">
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">双鱼座</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">金牛座</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">处女座</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">狮子座</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">摩羯座</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">水瓶座</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">天蝎座</span>
+					</p>
+				</div>
+			</article>
+		</div>
+		<!--民族-->
+		<div class="teampop teampopReceive vishow menat">
+			<header class="receive-hander">
+				<span class="receiveclose">取消</span>
+				<span>民族</span>
+				<span class="receive-shure">确认</span>
+			</header>
+			<article class="articReceive">
+				<div class="artrReceive">
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">摩羯座</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">汉族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">苗族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">回族</span>
+					</p>
+					<p class="elrp elrpa">
+						<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+						<span class="elremember ">朝鲜族</span>
+					</p>
+				</div>
+			</article>
+		</div>
+		<!--小学-->
+		<div class="teampop teampopReceive vishow samsool">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>小学就读学校</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article class="articleinme">
+					<input type="text" class="show-input" placeholder="请输入" />
+				</article>
+			</div>
+		</div>
+		<!--初中-->
+		<div class="teampop teampopReceive vishow midsool">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>初中就读学校</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article class="articleinme">
+					<input type="text" class="show-input" placeholder="请输入" />
+				</article>
+			</div>
+		</div>
+		<!--高中-->
+		<div class="teampop teampopReceive vishow higsool">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>高中就读学校</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article class="articleinme">
+					<input type="text" class="show-input" placeholder="请输入" />
+				</article>
+			</div>
+		</div>
+		<!--大学-->
+		<div class="teampop teampopReceive vishow bigsool">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>大学就读学校</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article class="articleinme">
+					<input type="text" class="show-input" placeholder="请输入" />
+				</article>
+			</div>
+		</div>
+
+		<!--出生地-->
+		<div class="teampop teampopReceive vishow borncit">
+
+		</div>
+		<!--居住情况-->
+		<div class="teampop teampopReceive vishow melive">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>居住情况</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article class="articReceive">
+					<div class="artrReceive">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">暂未购房</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">已购房（有贷款）</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">已购房（有贷款）</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">已购两套以上</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--婚姻-->
+		<div class="teampop teampopReceive vishow memarr">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>婚姻状况</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article class="articReceive">
+					<div class="artrReceive">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">未婚</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">已婚</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">离异</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">未婚无男女朋友</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--月薪-->
+		<div class="teampop teampopReceive vishow monthly">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>婚姻状况</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article class="articReceive">
+					<div class="artrReceive">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">2000以下</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">2000-5000</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">5000-1万</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">1万-2万</span>
+						</p>
+					</div>
+				</article>
+			</div>
+
+		</div>
+		<!--购车情况-->
+		<div class="teampop teampopReceive vishow buye">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>购车情况</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article class="articReceive">
+					<div class="artrReceive">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">暂未购车个</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">已购车（经济型）</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">已购车（经济型）</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">需要时购置</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--经济条件-->
+		<div class="teampop teampopReceive vishow econ">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>经济状况</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article class="articReceive">
+					<div class="artrReceive">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">有外债贷款</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">银行存款</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">证劵投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">购买保险</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">银行存款</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">证劵投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">购买保险</span>
+						</p>
+
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">银行存款</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">证劵投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png"/ class="suspenhand"></span>
+							<span class="elremember ">购买保险</span>
+						</p>
+
+						<p class="elrp elrpa">
+							<span class="elrspanc"><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">银行存款</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc"><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">证劵投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc"><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">购买保险</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc"><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">购买保险</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc"><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">购买保险</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc"><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">购买保险</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc"><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">购买保险</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--职业-->
+		<div class="teampop teampopReceive vishow occupa">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>职业</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article class="articReceive">
+					<div class="artrReceive">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">实习生</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">生活服务业</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">销售/客服/采购/淘宝</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">销售/客服/采购/淘宝</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">销售/客服/采购/淘宝</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--所在院校-->
+		<div class="teampop teampopReceive vishow colleges">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>所在院校</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article class="articleinme">
+					<input type="text" class="show-input" placeholder="请输入" />
+				</article>
+			</div>
+		</div>
+
+		<!--体育活动-->
+		<div class="teampop teampopReceive vishow physical">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>喜爱的体育活动</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article class="articReceive">
+					<div class="artrReceive">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">足球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">篮球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">排球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">乒乓球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">羽毛球d</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">篮球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">排球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">乒乓球c</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">羽毛球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">篮球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">排球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">乒乓球b</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">羽毛球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">排球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">乒乓球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">羽毛球a</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--食物-->
+		<div class="teampop teampopReceive vishow food">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>喜爱的食物</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article>
+					<div class="artrReceive">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">鲁菜</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">篮球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">排球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">乒乓球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">羽毛球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">篮球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">排球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">乒乓球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">羽毛球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">篮球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">排球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">乒乓球</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">羽毛球</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--电影-->
+		<div class="teampop teampopReceive vishow cream">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>喜爱的电影</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article>
+					<div class="artrReceive">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">惊悚片</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">喜剧片</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">爱情片</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">科幻片</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--节目-->
+		<div class="teampop teampopReceive vishow gig">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>喜爱的节目</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article class="articReceive">
+					<div class="artrReceive">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">政治事件</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">娱乐八卦</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">体育赛事</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">理财投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">理财投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">理财投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">理财投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">理财投资</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--娱乐-->
+		<div class="teampop teampopReceive vishow gLeisure">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>休闲娱乐</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article class="articReceive">
+					<div class="artrReceive">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">酒吧</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">剧院</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">电影院</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">音乐会</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">温泉</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网吧</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">理财投资</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">理财投资</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!--业余爱好-->
+		<div class="teampop teampopReceive vishow hobby">
+			<div class="tit-text">
+				<header class="receive-hander">
+					<span class="receiveclose">取消</span>
+					<span>业余爱好</span>
+					<span class="receive-shure">确认</span>
+				</header>
+				<article class="articReceive">
+					<div class="artrReceive">
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">网络游戏</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">汽车</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">动物</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">摄影</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">唱歌</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">跳舞</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">读书</span>
+						</p>
+						<p class="elrp elrpa">
+							<span class="elrspanc "><img src="img/no@2x.png" class="suspenhand"/></span>
+							<span class="elremember ">绘画</span>
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+
+		<!-- Framework7框架的js-->
+		<script type="text/javascript" src="dist/js/framework7.min.js"></script>
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 你的应用的js -->
+		<!--编辑器-->
+		<script src="js/bianjiqi.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--选择发布时间-->
+		<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/iosSelect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/date.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/uploadImg.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/moblie.js" type="text/javascript" charset="utf-8"></script>
+		<!--出生地-->
+		<script src="js/city.js" type="text/javascript" charset="utf-8"></script>		
+	</body>
+</html>

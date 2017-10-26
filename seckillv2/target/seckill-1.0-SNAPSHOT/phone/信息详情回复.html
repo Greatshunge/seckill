@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- meta标签设置-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,
+     maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+			<meta name="apple-mobile-web-app-capable" content="yes">
+			<meta name="apple-mobile-web-app-status-bar-style" content="black">
+			<!-- app标题 -->
+			<title>fabu</title>
+			<!-- 使用iOS CSS主题样式-->
+			<link rel="stylesheet" href="dist/css/framework7.ios.min.css">
+			<!-- iOS related颜色样式 -->
+			<link rel="stylesheet" href="dist/css/framework7.ios.colors.min.css">
+			<!-- 自定义样式-->
+			<link rel="stylesheet" href="dist/css/my-app.css">
+			<link rel="stylesheet" type="text/css" href="css/moblie.css" />
+
+	</head>
+
+	<body>
+
+		<!-- 所有的Views视图 -->
+		<div class="views ">
+			<div id="homeView" class="view ">
+				<!-- 主视图（需要有"view-main"样式） -->
+
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="left">
+							<a href="meindex.html" class="back link"><i class="icon icon-back"></i></a>
+						</div>
+						<!-- 标题元素（为了让页面切换时标题文字有滑动效果，添加sliding样式） -->
+						<div class="center navbar-title sliding">信息</div>
+						<div class="right" style="margin-right: 5px;"></div>
+					</div>
+				</div>
+				<div class="pages navbar-through toolbar-through">
+					<div data-page="index" class="page navbar-fixed">
+						
+						<div class="page-content infordetails"style="padding-bottom:0px;">
+								<div class="publishDetail">
+									<div class="infortitle">
+										<div class="publish" style="text-align: center;">
+											<span class="detailTitlie">标题标题</span>
+										</div>
+										<p class="publishPacct" style="float: left;">
+											<img src="img/author@2x.png" class="detailImg" />
+											<span>鲍树阁</span>发布
+										</p>
+										<p class="publishPacct" style="float: right;">
+											<img src="img/time@2x.png" class="detailImg" />
+											<span>2017.03.18 14:22</span>
+										</p>
+									</div>
+									<div class="detailActive">
+										<p>
+											美军侯任战略司令约翰·海腾20日参加了美国参议院军事委员会批准听证会，他表示：“可能性最大的威胁和最令人担忧的就是朝鲜。”他还指出，虽然朝鲜的核、导弹技术尚未达到俄罗斯和中国一样的水平，但问题是朝鲜的开发问题“作为最优先课题”。
+										</p>
+										<p class="activeImg">
+											<img src="img/1.jpg" />
+										</p>
+										<P>
+											报道称，9日朝鲜进行第5次核试验后，美国外交界已经有声音提到对朝鲜的“军事措施”。在奥巴马政府初期担任参谋长联席会议主席的迈克尔·马伦16日在美国外，如果实际上对美国构成威胁，（美国）从自卫层面上对朝鲜进行先发制人的打击是可能的。”
+										</P>
+									</div>
+									<div class="detailBtn">
+										<a href="#"><img src="img/btn-getrewards@2x.png" style="width: 60%;"/></a>
+									</div>
+									<div style="text-align: center;position: relative;">
+										<input type="text" class="detaiInput" placeholder="回复..." />
+										<img src="img/send@2x.png" class="detaiImg"/>
+									</div>
+									<div class="inforreply">
+										<img src="img/1.jpg" class="inforreplyImg"/>
+										<div class="inforreplyTex">
+											<p class="inforreplyName">宋晓东 ：</p>
+											<p class="inforreplyActive">
+												感谢您对我们公司的大力支持，我们会更加努力的。
+											</p>
+											<p class="inforActive">
+												<span class="iconnc">我</span> 回复 <span>宋晓东</span>：<span>感谢您对我们公司的大力支持，我们会更加努力的。</span>
+											</p>
+										</div>
+									</div>
+									<div class="inforreply inforreplyBa">
+										<img src="img/1.jpg" class="inforreplyImg"/>
+										<div class="inforreplyTex">
+											<p class="inforreplyName">宋晓东 ：</p>
+											<p class="inforreplyActive">
+												感谢您对我们公司的大力支持，我们会更加努力的。
+											</p>
+											<p class="inforActive">
+												<span class="iconnc">我</span> 回复 <span>宋晓东</span>：<span>感谢您对我们公司的大力支持，我们会更加努力的。</span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Framework7框架的js-->
+		<script type="text/javascript" src="dist/js/framework7.min.js"></script>
+		<!-- 你的应用的js -->
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--//文字超出隐藏-->
+		<script src="js/moblie.js" type="text/javascript" charset="utf-8"></script>
+			<!--去掉手机浏览器上边导航-->
+			<script src="js/browser.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

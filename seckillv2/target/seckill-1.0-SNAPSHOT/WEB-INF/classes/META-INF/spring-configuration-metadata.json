@@ -1,0 +1,37 @@
+{
+  "hints": [],
+  "properties": [
+    {
+      "sourceType": "org.seckill.action.DeployAction",
+      "name": "env.deploy-local-dir",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.seckill.action.DeployAction",
+      "name": "env.deploy-shell",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.seckill.action.DeployAction",
+      "name": "env.pkg-remote-host",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.seckill.action.DeployAction",
+      "name": "env.pkg-remote-path",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.seckill.action.DeployAction",
+      "name": "env.pkg-remote-port",
+      "type": "java.lang.String"
+    }
+  ],
+  "groups": [
+    {
+      "sourceType": "org.seckill.action.DeployAction",
+      "name": "env",
+      "type": "org.seckill.action.DeployAction"
+    }
+  ]
+}
