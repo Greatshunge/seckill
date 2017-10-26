@@ -14,6 +14,8 @@ $(function () {
     });
 });
 
+
+//展示
 function showimg(num) {
     index = num;
     $(".imgnum span").removeClass("onselect").eq(index-1).addClass("onselect");
